@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		22B200C315F6B99300394FE8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22B200C215F6B99300394FE8 /* Foundation.framework */; };
 		22B200C815F6B99300394FE8 /* godmode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 22B200C715F6B99300394FE8 /* godmode.h */; };
-		22B200CA15F6B99300394FE8 /* godmode.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B200C915F6B99300394FE8 /* godmode.m */; };
 		22B200D215F6B99300394FE8 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22B200D115F6B99300394FE8 /* SenTestingKit.framework */; };
 		22B200D415F6B99300394FE8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22B200D315F6B99300394FE8 /* UIKit.framework */; };
 		22B200D515F6B99300394FE8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22B200C215F6B99300394FE8 /* Foundation.framework */; };
@@ -67,7 +66,6 @@
 		22B200BF15F6B99300394FE8 /* libgodmode.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libgodmode.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		22B200C215F6B99300394FE8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		22B200C715F6B99300394FE8 /* godmode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = godmode.h; sourceTree = "<group>"; };
-		22B200C915F6B99300394FE8 /* godmode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = godmode.m; sourceTree = "<group>"; };
 		22B200D015F6B99300394FE8 /* godmodeTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = godmodeTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22B200D115F6B99300394FE8 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		22B200D315F6B99300394FE8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -138,7 +136,6 @@
 			isa = PBXGroup;
 			children = (
 				22B200C715F6B99300394FE8 /* godmode.h */,
-				22B200C915F6B99300394FE8 /* godmode.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -302,7 +299,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22B200CA15F6B99300394FE8 /* godmode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
