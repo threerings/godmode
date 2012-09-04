@@ -16,28 +16,28 @@
 		22B200DE15F6B99300394FE8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 22B200DC15F6B99300394FE8 /* InfoPlist.strings */; };
 		22B200E115F6B99300394FE8 /* godmodeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B200E015F6B99300394FE8 /* godmodeTests.m */; };
 		22B201A315F6BE6A00394FE8 /* libcooocoa.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 22B2018C15F6BE4400394FE8 /* libcooocoa.a */; };
-		22B201E315F6C1FE00394FE8 /* BehaviorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B201B915F6C1FC00394FE8 /* BehaviorFactory.m */; };
-		22B201E415F6C1FE00394FE8 /* BehaviorSemaphore.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B201BB15F6C1FC00394FE8 /* BehaviorSemaphore.m */; };
-		22B201E515F6C1FE00394FE8 /* BehaviorTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B201BE15F6C1FD00394FE8 /* BehaviorTask.m */; };
-		22B201E615F6C1FE00394FE8 /* BehaviorTaskPrinter.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B201C115F6C1FD00394FE8 /* BehaviorTaskPrinter.m */; };
-		22B201E715F6C1FE00394FE8 /* Blackboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B201C315F6C1FD00394FE8 /* Blackboard.m */; };
-		22B201E815F6C1FE00394FE8 /* BlockTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B201C515F6C1FD00394FE8 /* BlockTask.m */; };
-		22B201E915F6C1FE00394FE8 /* RemoveBlackboardKeyAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B201C715F6C1FD00394FE8 /* RemoveBlackboardKeyAction.m */; };
-		22B201EA15F6C1FE00394FE8 /* DelayFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B201C915F6C1FD00394FE8 /* DelayFilter.m */; };
-		22B201EB15F6C1FE00394FE8 /* FlagDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B201CB15F6C1FD00394FE8 /* FlagDecorator.m */; };
-		22B201EC15F6C1FE00394FE8 /* LoopingDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B201CD15F6C1FD00394FE8 /* LoopingDecorator.m */; };
-		22B201ED15F6C1FE00394FE8 /* NoOpAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B201CF15F6C1FD00394FE8 /* NoOpAction.m */; };
-		22B201EE15F6C1FE00394FE8 /* NotDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B201D115F6C1FD00394FE8 /* NotDecorator.m */; };
-		22B201EF15F6C1FE00394FE8 /* ParallelSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B201D315F6C1FD00394FE8 /* ParallelSelector.m */; };
-		22B201F015F6C1FE00394FE8 /* PredicateFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B201D515F6C1FE00394FE8 /* PredicateFilter.m */; };
-		22B201F115F6C1FE00394FE8 /* PrioritySelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B201D715F6C1FE00394FE8 /* PrioritySelector.m */; };
-		22B201F215F6C1FE00394FE8 /* SemaphoreGuardDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B201D915F6C1FE00394FE8 /* SemaphoreGuardDecorator.m */; };
-		22B201F315F6C1FE00394FE8 /* SequenceSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B201DB15F6C1FE00394FE8 /* SequenceSelector.m */; };
-		22B201F415F6C1FE00394FE8 /* StatefulBehaviorTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B201DE15F6C1FE00394FE8 /* StatefulBehaviorTask.m */; };
-		22B201F515F6C1FE00394FE8 /* TimerAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B201E015F6C1FE00394FE8 /* TimerAction.m */; };
-		22B201F615F6C1FE00394FE8 /* WeightedSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B201E215F6C1FE00394FE8 /* WeightedSelector.m */; };
-		22B201FC15F6C22200394FE8 /* BehaviorPredicate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B201F915F6C22200394FE8 /* BehaviorPredicate.m */; };
-		22B201FD15F6C22200394FE8 /* FlagSetPredicate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B201FB15F6C22200394FE8 /* FlagSetPredicate.m */; };
+		22B201E315F6C1FE00394FE8 /* GMBehaviorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B201B915F6C1FC00394FE8 /* GMBehaviorFactory.m */; };
+		22B201E415F6C1FE00394FE8 /* GMSemaphore.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B201BB15F6C1FC00394FE8 /* GMSemaphore.m */; };
+		22B201E515F6C1FE00394FE8 /* GMTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B201BE15F6C1FD00394FE8 /* GMTask.m */; };
+		22B201E615F6C1FE00394FE8 /* GMTaskPrinter.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B201C115F6C1FD00394FE8 /* GMTaskPrinter.m */; };
+		22B201E715F6C1FE00394FE8 /* GMBlackboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B201C315F6C1FD00394FE8 /* GMBlackboard.m */; };
+		22B201E815F6C1FE00394FE8 /* GMBlockTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B201C515F6C1FD00394FE8 /* GMBlockTask.m */; };
+		22B201E915F6C1FE00394FE8 /* GMRemoveBlackboardKeyAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B201C715F6C1FD00394FE8 /* GMRemoveBlackboardKeyAction.m */; };
+		22B201EA15F6C1FE00394FE8 /* GMDelayFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B201C915F6C1FD00394FE8 /* GMDelayFilter.m */; };
+		22B201EB15F6C1FE00394FE8 /* GMFlagDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B201CB15F6C1FD00394FE8 /* GMFlagDecorator.m */; };
+		22B201EC15F6C1FE00394FE8 /* GMLoopingDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B201CD15F6C1FD00394FE8 /* GMLoopingDecorator.m */; };
+		22B201ED15F6C1FE00394FE8 /* GMNoOpAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B201CF15F6C1FD00394FE8 /* GMNoOpAction.m */; };
+		22B201EE15F6C1FE00394FE8 /* GMNotDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B201D115F6C1FD00394FE8 /* GMNotDecorator.m */; };
+		22B201EF15F6C1FE00394FE8 /* GMParallelSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B201D315F6C1FD00394FE8 /* GMParallelSelector.m */; };
+		22B201F015F6C1FE00394FE8 /* GMPredicateFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B201D515F6C1FE00394FE8 /* GMPredicateFilter.m */; };
+		22B201F115F6C1FE00394FE8 /* GMPrioritySelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B201D715F6C1FE00394FE8 /* GMPrioritySelector.m */; };
+		22B201F215F6C1FE00394FE8 /* GMSemaphoreGuardDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B201D915F6C1FE00394FE8 /* GMSemaphoreGuardDecorator.m */; };
+		22B201F315F6C1FE00394FE8 /* GMSequenceSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B201DB15F6C1FE00394FE8 /* GMSequenceSelector.m */; };
+		22B201F415F6C1FE00394FE8 /* GMStatefulTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B201DE15F6C1FE00394FE8 /* GMStatefulTask.m */; };
+		22B201F515F6C1FE00394FE8 /* GMTimerAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B201E015F6C1FE00394FE8 /* GMTimerAction.m */; };
+		22B201F615F6C1FE00394FE8 /* GMWeightedSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B201E215F6C1FE00394FE8 /* GMWeightedSelector.m */; };
+		22B201FC15F6C22200394FE8 /* GMPredicate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B201F915F6C22200394FE8 /* GMPredicate.m */; };
+		22B201FD15F6C22200394FE8 /* GMFlagSetPredicate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B201FB15F6C22200394FE8 /* GMFlagSetPredicate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,53 +97,53 @@
 		22B200E015F6B99300394FE8 /* godmodeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = godmodeTests.m; sourceTree = "<group>"; };
 		22B200F215F6BA3000394FE8 /* godmode_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = godmode_Prefix.pch; sourceTree = "<group>"; };
 		22B2014915F6BC5900394FE8 /* cooocoa.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cooocoa.xcodeproj; path = ../cooocoa.xcodeproj; sourceTree = COOOCOA_SRC; };
-		22B201B815F6C1FC00394FE8 /* BehaviorFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BehaviorFactory.h; sourceTree = "<group>"; };
-		22B201B915F6C1FC00394FE8 /* BehaviorFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BehaviorFactory.m; sourceTree = "<group>"; };
-		22B201BA15F6C1FC00394FE8 /* BehaviorSemaphore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BehaviorSemaphore.h; sourceTree = "<group>"; };
-		22B201BB15F6C1FC00394FE8 /* BehaviorSemaphore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BehaviorSemaphore.m; sourceTree = "<group>"; };
-		22B201BC15F6C1FC00394FE8 /* BehaviorTask+Protected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BehaviorTask+Protected.h"; sourceTree = "<group>"; };
-		22B201BD15F6C1FD00394FE8 /* BehaviorTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BehaviorTask.h; sourceTree = "<group>"; };
-		22B201BE15F6C1FD00394FE8 /* BehaviorTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BehaviorTask.m; sourceTree = "<group>"; };
-		22B201BF15F6C1FD00394FE8 /* BehaviorTaskContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BehaviorTaskContainer.h; sourceTree = "<group>"; };
-		22B201C015F6C1FD00394FE8 /* BehaviorTaskPrinter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BehaviorTaskPrinter.h; sourceTree = "<group>"; };
-		22B201C115F6C1FD00394FE8 /* BehaviorTaskPrinter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BehaviorTaskPrinter.m; sourceTree = "<group>"; };
-		22B201C215F6C1FD00394FE8 /* Blackboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Blackboard.h; sourceTree = "<group>"; };
-		22B201C315F6C1FD00394FE8 /* Blackboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Blackboard.m; sourceTree = "<group>"; };
-		22B201C415F6C1FD00394FE8 /* BlockTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockTask.h; sourceTree = "<group>"; };
-		22B201C515F6C1FD00394FE8 /* BlockTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockTask.m; sourceTree = "<group>"; };
-		22B201C615F6C1FD00394FE8 /* RemoveBlackboardKeyAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemoveBlackboardKeyAction.h; sourceTree = "<group>"; };
-		22B201C715F6C1FD00394FE8 /* RemoveBlackboardKeyAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemoveBlackboardKeyAction.m; sourceTree = "<group>"; };
-		22B201C815F6C1FD00394FE8 /* DelayFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DelayFilter.h; sourceTree = "<group>"; };
-		22B201C915F6C1FD00394FE8 /* DelayFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DelayFilter.m; sourceTree = "<group>"; };
-		22B201CA15F6C1FD00394FE8 /* FlagDecorator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlagDecorator.h; sourceTree = "<group>"; };
-		22B201CB15F6C1FD00394FE8 /* FlagDecorator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlagDecorator.m; sourceTree = "<group>"; };
-		22B201CC15F6C1FD00394FE8 /* LoopingDecorator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoopingDecorator.h; sourceTree = "<group>"; };
-		22B201CD15F6C1FD00394FE8 /* LoopingDecorator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoopingDecorator.m; sourceTree = "<group>"; };
-		22B201CE15F6C1FD00394FE8 /* NoOpAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoOpAction.h; sourceTree = "<group>"; };
-		22B201CF15F6C1FD00394FE8 /* NoOpAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoOpAction.m; sourceTree = "<group>"; };
-		22B201D015F6C1FD00394FE8 /* NotDecorator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotDecorator.h; sourceTree = "<group>"; };
-		22B201D115F6C1FD00394FE8 /* NotDecorator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotDecorator.m; sourceTree = "<group>"; };
-		22B201D215F6C1FD00394FE8 /* ParallelSelector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParallelSelector.h; sourceTree = "<group>"; };
-		22B201D315F6C1FD00394FE8 /* ParallelSelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParallelSelector.m; sourceTree = "<group>"; };
-		22B201D415F6C1FE00394FE8 /* PredicateFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PredicateFilter.h; sourceTree = "<group>"; };
-		22B201D515F6C1FE00394FE8 /* PredicateFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PredicateFilter.m; sourceTree = "<group>"; };
-		22B201D615F6C1FE00394FE8 /* PrioritySelector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrioritySelector.h; sourceTree = "<group>"; };
-		22B201D715F6C1FE00394FE8 /* PrioritySelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrioritySelector.m; sourceTree = "<group>"; };
-		22B201D815F6C1FE00394FE8 /* SemaphoreGuardDecorator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SemaphoreGuardDecorator.h; sourceTree = "<group>"; };
-		22B201D915F6C1FE00394FE8 /* SemaphoreGuardDecorator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SemaphoreGuardDecorator.m; sourceTree = "<group>"; };
-		22B201DA15F6C1FE00394FE8 /* SequenceSelector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SequenceSelector.h; sourceTree = "<group>"; };
-		22B201DB15F6C1FE00394FE8 /* SequenceSelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SequenceSelector.m; sourceTree = "<group>"; };
-		22B201DC15F6C1FE00394FE8 /* StatefulBehaviorTask+Protected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "StatefulBehaviorTask+Protected.h"; sourceTree = "<group>"; };
-		22B201DD15F6C1FE00394FE8 /* StatefulBehaviorTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatefulBehaviorTask.h; sourceTree = "<group>"; };
-		22B201DE15F6C1FE00394FE8 /* StatefulBehaviorTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatefulBehaviorTask.m; sourceTree = "<group>"; };
-		22B201DF15F6C1FE00394FE8 /* TimerAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerAction.h; sourceTree = "<group>"; };
-		22B201E015F6C1FE00394FE8 /* TimerAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerAction.m; sourceTree = "<group>"; };
-		22B201E115F6C1FE00394FE8 /* WeightedSelector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeightedSelector.h; sourceTree = "<group>"; };
-		22B201E215F6C1FE00394FE8 /* WeightedSelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeightedSelector.m; sourceTree = "<group>"; };
-		22B201F815F6C22200394FE8 /* BehaviorPredicate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BehaviorPredicate.h; sourceTree = "<group>"; };
-		22B201F915F6C22200394FE8 /* BehaviorPredicate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BehaviorPredicate.m; sourceTree = "<group>"; };
-		22B201FA15F6C22200394FE8 /* FlagSetPredicate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlagSetPredicate.h; sourceTree = "<group>"; };
-		22B201FB15F6C22200394FE8 /* FlagSetPredicate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlagSetPredicate.m; sourceTree = "<group>"; };
+		22B201B815F6C1FC00394FE8 /* GMBehaviorFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMBehaviorFactory.h; sourceTree = "<group>"; };
+		22B201B915F6C1FC00394FE8 /* GMBehaviorFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMBehaviorFactory.m; sourceTree = "<group>"; };
+		22B201BA15F6C1FC00394FE8 /* GMSemaphore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMSemaphore.h; sourceTree = "<group>"; };
+		22B201BB15F6C1FC00394FE8 /* GMSemaphore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMSemaphore.m; sourceTree = "<group>"; };
+		22B201BC15F6C1FC00394FE8 /* GMTask+Protected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GMTask+Protected.h"; sourceTree = "<group>"; };
+		22B201BD15F6C1FD00394FE8 /* GMTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMTask.h; sourceTree = "<group>"; };
+		22B201BE15F6C1FD00394FE8 /* GMTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMTask.m; sourceTree = "<group>"; };
+		22B201BF15F6C1FD00394FE8 /* GMTaskContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMTaskContainer.h; sourceTree = "<group>"; };
+		22B201C015F6C1FD00394FE8 /* GMTaskPrinter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMTaskPrinter.h; sourceTree = "<group>"; };
+		22B201C115F6C1FD00394FE8 /* GMTaskPrinter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMTaskPrinter.m; sourceTree = "<group>"; };
+		22B201C215F6C1FD00394FE8 /* GMBlackboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMBlackboard.h; sourceTree = "<group>"; };
+		22B201C315F6C1FD00394FE8 /* GMBlackboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMBlackboard.m; sourceTree = "<group>"; };
+		22B201C415F6C1FD00394FE8 /* GMBlockTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMBlockTask.h; sourceTree = "<group>"; };
+		22B201C515F6C1FD00394FE8 /* GMBlockTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMBlockTask.m; sourceTree = "<group>"; };
+		22B201C615F6C1FD00394FE8 /* GMRemoveBlackboardKeyAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRemoveBlackboardKeyAction.h; sourceTree = "<group>"; };
+		22B201C715F6C1FD00394FE8 /* GMRemoveBlackboardKeyAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRemoveBlackboardKeyAction.m; sourceTree = "<group>"; };
+		22B201C815F6C1FD00394FE8 /* GMDelayFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMDelayFilter.h; sourceTree = "<group>"; };
+		22B201C915F6C1FD00394FE8 /* GMDelayFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMDelayFilter.m; sourceTree = "<group>"; };
+		22B201CA15F6C1FD00394FE8 /* GMFlagDecorator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMFlagDecorator.h; sourceTree = "<group>"; };
+		22B201CB15F6C1FD00394FE8 /* GMFlagDecorator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMFlagDecorator.m; sourceTree = "<group>"; };
+		22B201CC15F6C1FD00394FE8 /* GMLoopingDecorator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMLoopingDecorator.h; sourceTree = "<group>"; };
+		22B201CD15F6C1FD00394FE8 /* GMLoopingDecorator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMLoopingDecorator.m; sourceTree = "<group>"; };
+		22B201CE15F6C1FD00394FE8 /* GMNoOpAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMNoOpAction.h; sourceTree = "<group>"; };
+		22B201CF15F6C1FD00394FE8 /* GMNoOpAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMNoOpAction.m; sourceTree = "<group>"; };
+		22B201D015F6C1FD00394FE8 /* GMNotDecorator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMNotDecorator.h; sourceTree = "<group>"; };
+		22B201D115F6C1FD00394FE8 /* GMNotDecorator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMNotDecorator.m; sourceTree = "<group>"; };
+		22B201D215F6C1FD00394FE8 /* GMParallelSelector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMParallelSelector.h; sourceTree = "<group>"; };
+		22B201D315F6C1FD00394FE8 /* GMParallelSelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMParallelSelector.m; sourceTree = "<group>"; };
+		22B201D415F6C1FE00394FE8 /* GMPredicateFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMPredicateFilter.h; sourceTree = "<group>"; };
+		22B201D515F6C1FE00394FE8 /* GMPredicateFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMPredicateFilter.m; sourceTree = "<group>"; };
+		22B201D615F6C1FE00394FE8 /* GMPrioritySelector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMPrioritySelector.h; sourceTree = "<group>"; };
+		22B201D715F6C1FE00394FE8 /* GMPrioritySelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMPrioritySelector.m; sourceTree = "<group>"; };
+		22B201D815F6C1FE00394FE8 /* GMSemaphoreGuardDecorator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMSemaphoreGuardDecorator.h; sourceTree = "<group>"; };
+		22B201D915F6C1FE00394FE8 /* GMSemaphoreGuardDecorator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMSemaphoreGuardDecorator.m; sourceTree = "<group>"; };
+		22B201DA15F6C1FE00394FE8 /* GMSequenceSelector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMSequenceSelector.h; sourceTree = "<group>"; };
+		22B201DB15F6C1FE00394FE8 /* GMSequenceSelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMSequenceSelector.m; sourceTree = "<group>"; };
+		22B201DC15F6C1FE00394FE8 /* GMStatefulTask+Protected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GMStatefulTask+Protected.h"; sourceTree = "<group>"; };
+		22B201DD15F6C1FE00394FE8 /* GMStatefulTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMStatefulTask.h; sourceTree = "<group>"; };
+		22B201DE15F6C1FE00394FE8 /* GMStatefulTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMStatefulTask.m; sourceTree = "<group>"; };
+		22B201DF15F6C1FE00394FE8 /* GMTimerAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMTimerAction.h; sourceTree = "<group>"; };
+		22B201E015F6C1FE00394FE8 /* GMTimerAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMTimerAction.m; sourceTree = "<group>"; };
+		22B201E115F6C1FE00394FE8 /* GMWeightedSelector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMWeightedSelector.h; sourceTree = "<group>"; };
+		22B201E215F6C1FE00394FE8 /* GMWeightedSelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMWeightedSelector.m; sourceTree = "<group>"; };
+		22B201F815F6C22200394FE8 /* GMPredicate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMPredicate.h; sourceTree = "<group>"; };
+		22B201F915F6C22200394FE8 /* GMPredicate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMPredicate.m; sourceTree = "<group>"; };
+		22B201FA15F6C22200394FE8 /* GMFlagSetPredicate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMFlagSetPredicate.h; sourceTree = "<group>"; };
+		22B201FB15F6C22200394FE8 /* GMFlagSetPredicate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMFlagSetPredicate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,54 +204,54 @@
 		22B200C415F6B99300394FE8 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				22B201B815F6C1FC00394FE8 /* BehaviorFactory.h */,
-				22B201B915F6C1FC00394FE8 /* BehaviorFactory.m */,
-				22B201F815F6C22200394FE8 /* BehaviorPredicate.h */,
-				22B201F915F6C22200394FE8 /* BehaviorPredicate.m */,
-				22B201BA15F6C1FC00394FE8 /* BehaviorSemaphore.h */,
-				22B201BB15F6C1FC00394FE8 /* BehaviorSemaphore.m */,
-				22B201BC15F6C1FC00394FE8 /* BehaviorTask+Protected.h */,
-				22B201BD15F6C1FD00394FE8 /* BehaviorTask.h */,
-				22B201BE15F6C1FD00394FE8 /* BehaviorTask.m */,
-				22B201BF15F6C1FD00394FE8 /* BehaviorTaskContainer.h */,
-				22B201C015F6C1FD00394FE8 /* BehaviorTaskPrinter.h */,
-				22B201C115F6C1FD00394FE8 /* BehaviorTaskPrinter.m */,
-				22B201C215F6C1FD00394FE8 /* Blackboard.h */,
-				22B201C315F6C1FD00394FE8 /* Blackboard.m */,
-				22B201C415F6C1FD00394FE8 /* BlockTask.h */,
-				22B201C515F6C1FD00394FE8 /* BlockTask.m */,
-				22B201C815F6C1FD00394FE8 /* DelayFilter.h */,
-				22B201C915F6C1FD00394FE8 /* DelayFilter.m */,
-				22B201CA15F6C1FD00394FE8 /* FlagDecorator.h */,
-				22B201CB15F6C1FD00394FE8 /* FlagDecorator.m */,
-				22B201FA15F6C22200394FE8 /* FlagSetPredicate.h */,
-				22B201FB15F6C22200394FE8 /* FlagSetPredicate.m */,
+				22B201B815F6C1FC00394FE8 /* GMBehaviorFactory.h */,
+				22B201B915F6C1FC00394FE8 /* GMBehaviorFactory.m */,
+				22B201C215F6C1FD00394FE8 /* GMBlackboard.h */,
+				22B201C315F6C1FD00394FE8 /* GMBlackboard.m */,
+				22B201C415F6C1FD00394FE8 /* GMBlockTask.h */,
+				22B201C515F6C1FD00394FE8 /* GMBlockTask.m */,
+				22B201C815F6C1FD00394FE8 /* GMDelayFilter.h */,
+				22B201C915F6C1FD00394FE8 /* GMDelayFilter.m */,
+				22B201CA15F6C1FD00394FE8 /* GMFlagDecorator.h */,
+				22B201CB15F6C1FD00394FE8 /* GMFlagDecorator.m */,
+				22B201FA15F6C22200394FE8 /* GMFlagSetPredicate.h */,
+				22B201FB15F6C22200394FE8 /* GMFlagSetPredicate.m */,
+				22B201CC15F6C1FD00394FE8 /* GMLoopingDecorator.h */,
+				22B201CD15F6C1FD00394FE8 /* GMLoopingDecorator.m */,
+				22B201CE15F6C1FD00394FE8 /* GMNoOpAction.h */,
+				22B201CF15F6C1FD00394FE8 /* GMNoOpAction.m */,
+				22B201D015F6C1FD00394FE8 /* GMNotDecorator.h */,
+				22B201D115F6C1FD00394FE8 /* GMNotDecorator.m */,
+				22B201D215F6C1FD00394FE8 /* GMParallelSelector.h */,
+				22B201D315F6C1FD00394FE8 /* GMParallelSelector.m */,
+				22B201F815F6C22200394FE8 /* GMPredicate.h */,
+				22B201F915F6C22200394FE8 /* GMPredicate.m */,
+				22B201D415F6C1FE00394FE8 /* GMPredicateFilter.h */,
+				22B201D515F6C1FE00394FE8 /* GMPredicateFilter.m */,
+				22B201D615F6C1FE00394FE8 /* GMPrioritySelector.h */,
+				22B201D715F6C1FE00394FE8 /* GMPrioritySelector.m */,
+				22B201C615F6C1FD00394FE8 /* GMRemoveBlackboardKeyAction.h */,
+				22B201C715F6C1FD00394FE8 /* GMRemoveBlackboardKeyAction.m */,
+				22B201BA15F6C1FC00394FE8 /* GMSemaphore.h */,
+				22B201BB15F6C1FC00394FE8 /* GMSemaphore.m */,
+				22B201D815F6C1FE00394FE8 /* GMSemaphoreGuardDecorator.h */,
+				22B201D915F6C1FE00394FE8 /* GMSemaphoreGuardDecorator.m */,
+				22B201DA15F6C1FE00394FE8 /* GMSequenceSelector.h */,
+				22B201DB15F6C1FE00394FE8 /* GMSequenceSelector.m */,
+				22B201DC15F6C1FE00394FE8 /* GMStatefulTask+Protected.h */,
+				22B201DD15F6C1FE00394FE8 /* GMStatefulTask.h */,
+				22B201DE15F6C1FE00394FE8 /* GMStatefulTask.m */,
+				22B201BC15F6C1FC00394FE8 /* GMTask+Protected.h */,
+				22B201BD15F6C1FD00394FE8 /* GMTask.h */,
+				22B201BE15F6C1FD00394FE8 /* GMTask.m */,
+				22B201BF15F6C1FD00394FE8 /* GMTaskContainer.h */,
+				22B201C015F6C1FD00394FE8 /* GMTaskPrinter.h */,
+				22B201C115F6C1FD00394FE8 /* GMTaskPrinter.m */,
+				22B201DF15F6C1FE00394FE8 /* GMTimerAction.h */,
+				22B201E015F6C1FE00394FE8 /* GMTimerAction.m */,
+				22B201E115F6C1FE00394FE8 /* GMWeightedSelector.h */,
+				22B201E215F6C1FE00394FE8 /* GMWeightedSelector.m */,
 				22B200C715F6B99300394FE8 /* godmode.h */,
-				22B201CC15F6C1FD00394FE8 /* LoopingDecorator.h */,
-				22B201CD15F6C1FD00394FE8 /* LoopingDecorator.m */,
-				22B201CE15F6C1FD00394FE8 /* NoOpAction.h */,
-				22B201CF15F6C1FD00394FE8 /* NoOpAction.m */,
-				22B201D015F6C1FD00394FE8 /* NotDecorator.h */,
-				22B201D115F6C1FD00394FE8 /* NotDecorator.m */,
-				22B201D215F6C1FD00394FE8 /* ParallelSelector.h */,
-				22B201D315F6C1FD00394FE8 /* ParallelSelector.m */,
-				22B201D415F6C1FE00394FE8 /* PredicateFilter.h */,
-				22B201D515F6C1FE00394FE8 /* PredicateFilter.m */,
-				22B201D615F6C1FE00394FE8 /* PrioritySelector.h */,
-				22B201D715F6C1FE00394FE8 /* PrioritySelector.m */,
-				22B201C615F6C1FD00394FE8 /* RemoveBlackboardKeyAction.h */,
-				22B201C715F6C1FD00394FE8 /* RemoveBlackboardKeyAction.m */,
-				22B201D815F6C1FE00394FE8 /* SemaphoreGuardDecorator.h */,
-				22B201D915F6C1FE00394FE8 /* SemaphoreGuardDecorator.m */,
-				22B201DA15F6C1FE00394FE8 /* SequenceSelector.h */,
-				22B201DB15F6C1FE00394FE8 /* SequenceSelector.m */,
-				22B201DC15F6C1FE00394FE8 /* StatefulBehaviorTask+Protected.h */,
-				22B201DD15F6C1FE00394FE8 /* StatefulBehaviorTask.h */,
-				22B201DE15F6C1FE00394FE8 /* StatefulBehaviorTask.m */,
-				22B201DF15F6C1FE00394FE8 /* TimerAction.h */,
-				22B201E015F6C1FE00394FE8 /* TimerAction.m */,
-				22B201E115F6C1FE00394FE8 /* WeightedSelector.h */,
-				22B201E215F6C1FE00394FE8 /* WeightedSelector.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -415,28 +415,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22B201E315F6C1FE00394FE8 /* BehaviorFactory.m in Sources */,
-				22B201E415F6C1FE00394FE8 /* BehaviorSemaphore.m in Sources */,
-				22B201E515F6C1FE00394FE8 /* BehaviorTask.m in Sources */,
-				22B201E615F6C1FE00394FE8 /* BehaviorTaskPrinter.m in Sources */,
-				22B201E715F6C1FE00394FE8 /* Blackboard.m in Sources */,
-				22B201E815F6C1FE00394FE8 /* BlockTask.m in Sources */,
-				22B201E915F6C1FE00394FE8 /* RemoveBlackboardKeyAction.m in Sources */,
-				22B201EA15F6C1FE00394FE8 /* DelayFilter.m in Sources */,
-				22B201EB15F6C1FE00394FE8 /* FlagDecorator.m in Sources */,
-				22B201EC15F6C1FE00394FE8 /* LoopingDecorator.m in Sources */,
-				22B201ED15F6C1FE00394FE8 /* NoOpAction.m in Sources */,
-				22B201EE15F6C1FE00394FE8 /* NotDecorator.m in Sources */,
-				22B201EF15F6C1FE00394FE8 /* ParallelSelector.m in Sources */,
-				22B201F015F6C1FE00394FE8 /* PredicateFilter.m in Sources */,
-				22B201F115F6C1FE00394FE8 /* PrioritySelector.m in Sources */,
-				22B201F215F6C1FE00394FE8 /* SemaphoreGuardDecorator.m in Sources */,
-				22B201F315F6C1FE00394FE8 /* SequenceSelector.m in Sources */,
-				22B201F415F6C1FE00394FE8 /* StatefulBehaviorTask.m in Sources */,
-				22B201F515F6C1FE00394FE8 /* TimerAction.m in Sources */,
-				22B201F615F6C1FE00394FE8 /* WeightedSelector.m in Sources */,
-				22B201FC15F6C22200394FE8 /* BehaviorPredicate.m in Sources */,
-				22B201FD15F6C22200394FE8 /* FlagSetPredicate.m in Sources */,
+				22B201E315F6C1FE00394FE8 /* GMBehaviorFactory.m in Sources */,
+				22B201E415F6C1FE00394FE8 /* GMSemaphore.m in Sources */,
+				22B201E515F6C1FE00394FE8 /* GMTask.m in Sources */,
+				22B201E615F6C1FE00394FE8 /* GMTaskPrinter.m in Sources */,
+				22B201E715F6C1FE00394FE8 /* GMBlackboard.m in Sources */,
+				22B201E815F6C1FE00394FE8 /* GMBlockTask.m in Sources */,
+				22B201E915F6C1FE00394FE8 /* GMRemoveBlackboardKeyAction.m in Sources */,
+				22B201EA15F6C1FE00394FE8 /* GMDelayFilter.m in Sources */,
+				22B201EB15F6C1FE00394FE8 /* GMFlagDecorator.m in Sources */,
+				22B201EC15F6C1FE00394FE8 /* GMLoopingDecorator.m in Sources */,
+				22B201ED15F6C1FE00394FE8 /* GMNoOpAction.m in Sources */,
+				22B201EE15F6C1FE00394FE8 /* GMNotDecorator.m in Sources */,
+				22B201EF15F6C1FE00394FE8 /* GMParallelSelector.m in Sources */,
+				22B201F015F6C1FE00394FE8 /* GMPredicateFilter.m in Sources */,
+				22B201F115F6C1FE00394FE8 /* GMPrioritySelector.m in Sources */,
+				22B201F215F6C1FE00394FE8 /* GMSemaphoreGuardDecorator.m in Sources */,
+				22B201F315F6C1FE00394FE8 /* GMSequenceSelector.m in Sources */,
+				22B201F415F6C1FE00394FE8 /* GMStatefulTask.m in Sources */,
+				22B201F515F6C1FE00394FE8 /* GMTimerAction.m in Sources */,
+				22B201F615F6C1FE00394FE8 /* GMWeightedSelector.m in Sources */,
+				22B201FC15F6C22200394FE8 /* GMPredicate.m in Sources */,
+				22B201FD15F6C22200394FE8 /* GMFlagSetPredicate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
