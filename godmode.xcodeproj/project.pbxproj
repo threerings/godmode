@@ -204,54 +204,13 @@
 		22B200C415F6B99300394FE8 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				22B201B815F6C1FC00394FE8 /* GMBehaviorFactory.h */,
-				22B201B915F6C1FC00394FE8 /* GMBehaviorFactory.m */,
-				22B201C215F6C1FD00394FE8 /* GMBlackboard.h */,
-				22B201C315F6C1FD00394FE8 /* GMBlackboard.m */,
-				22B201C415F6C1FD00394FE8 /* GMBlockTask.h */,
-				22B201C515F6C1FD00394FE8 /* GMBlockTask.m */,
-				22B201C815F6C1FD00394FE8 /* GMDelayFilter.h */,
-				22B201C915F6C1FD00394FE8 /* GMDelayFilter.m */,
-				22B201CA15F6C1FD00394FE8 /* GMFlagDecorator.h */,
-				22B201CB15F6C1FD00394FE8 /* GMFlagDecorator.m */,
-				22B201FA15F6C22200394FE8 /* GMFlagSetPredicate.h */,
-				22B201FB15F6C22200394FE8 /* GMFlagSetPredicate.m */,
-				22B201CC15F6C1FD00394FE8 /* GMLoopingDecorator.h */,
-				22B201CD15F6C1FD00394FE8 /* GMLoopingDecorator.m */,
-				22B201CE15F6C1FD00394FE8 /* GMNoOpAction.h */,
-				22B201CF15F6C1FD00394FE8 /* GMNoOpAction.m */,
-				22B201D015F6C1FD00394FE8 /* GMNotDecorator.h */,
-				22B201D115F6C1FD00394FE8 /* GMNotDecorator.m */,
-				22B201D215F6C1FD00394FE8 /* GMParallelSelector.h */,
-				22B201D315F6C1FD00394FE8 /* GMParallelSelector.m */,
-				22B201F815F6C22200394FE8 /* GMPredicate.h */,
-				22B201F915F6C22200394FE8 /* GMPredicate.m */,
-				22B201D415F6C1FE00394FE8 /* GMPredicateFilter.h */,
-				22B201D515F6C1FE00394FE8 /* GMPredicateFilter.m */,
-				22B201D615F6C1FE00394FE8 /* GMPrioritySelector.h */,
-				22B201D715F6C1FE00394FE8 /* GMPrioritySelector.m */,
-				22B201C615F6C1FD00394FE8 /* GMRemoveBlackboardKeyAction.h */,
-				22B201C715F6C1FD00394FE8 /* GMRemoveBlackboardKeyAction.m */,
-				22B201BA15F6C1FC00394FE8 /* GMSemaphore.h */,
-				22B201BB15F6C1FC00394FE8 /* GMSemaphore.m */,
-				22B201D815F6C1FE00394FE8 /* GMSemaphoreGuardDecorator.h */,
-				22B201D915F6C1FE00394FE8 /* GMSemaphoreGuardDecorator.m */,
-				22B201DA15F6C1FE00394FE8 /* GMSequenceSelector.h */,
-				22B201DB15F6C1FE00394FE8 /* GMSequenceSelector.m */,
-				22B201DC15F6C1FE00394FE8 /* GMStatefulTask+Protected.h */,
-				22B201DD15F6C1FE00394FE8 /* GMStatefulTask.h */,
-				22B201DE15F6C1FE00394FE8 /* GMStatefulTask.m */,
-				22B201BC15F6C1FC00394FE8 /* GMTask+Protected.h */,
-				22B201BD15F6C1FD00394FE8 /* GMTask.h */,
-				22B201BE15F6C1FD00394FE8 /* GMTask.m */,
-				22B201BF15F6C1FD00394FE8 /* GMTaskContainer.h */,
-				22B201C015F6C1FD00394FE8 /* GMTaskPrinter.h */,
-				22B201C115F6C1FD00394FE8 /* GMTaskPrinter.m */,
-				22B201DF15F6C1FE00394FE8 /* GMTimerAction.h */,
-				22B201E015F6C1FE00394FE8 /* GMTimerAction.m */,
-				22B201E115F6C1FE00394FE8 /* GMWeightedSelector.h */,
-				22B201E215F6C1FE00394FE8 /* GMWeightedSelector.m */,
 				22B200C715F6B99300394FE8 /* godmode.h */,
+				22B2020615F6C6B000394FE8 /* Action */,
+				22B2020915F6C76900394FE8 /* Base */,
+				22B2020715F6C6DF00394FE8 /* Decorator */,
+				22B2020415F6C66400394FE8 /* Predicate */,
+				22B2020515F6C67C00394FE8 /* Selector */,
+				22B2020815F6C73E00394FE8 /* Util */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -290,6 +249,95 @@
 				22B2018E15F6BE4400394FE8 /* cooocoaTests.octest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		22B2020415F6C66400394FE8 /* Predicate */ = {
+			isa = PBXGroup;
+			children = (
+				22B201FA15F6C22200394FE8 /* GMFlagSetPredicate.h */,
+				22B201FB15F6C22200394FE8 /* GMFlagSetPredicate.m */,
+				22B201F815F6C22200394FE8 /* GMPredicate.h */,
+				22B201F915F6C22200394FE8 /* GMPredicate.m */,
+			);
+			name = Predicate;
+			sourceTree = "<group>";
+		};
+		22B2020515F6C67C00394FE8 /* Selector */ = {
+			isa = PBXGroup;
+			children = (
+				22B201D215F6C1FD00394FE8 /* GMParallelSelector.h */,
+				22B201D315F6C1FD00394FE8 /* GMParallelSelector.m */,
+				22B201D615F6C1FE00394FE8 /* GMPrioritySelector.h */,
+				22B201D715F6C1FE00394FE8 /* GMPrioritySelector.m */,
+				22B201DA15F6C1FE00394FE8 /* GMSequenceSelector.h */,
+				22B201DB15F6C1FE00394FE8 /* GMSequenceSelector.m */,
+				22B201E115F6C1FE00394FE8 /* GMWeightedSelector.h */,
+				22B201E215F6C1FE00394FE8 /* GMWeightedSelector.m */,
+			);
+			name = Selector;
+			sourceTree = "<group>";
+		};
+		22B2020615F6C6B000394FE8 /* Action */ = {
+			isa = PBXGroup;
+			children = (
+				22B201CE15F6C1FD00394FE8 /* GMNoOpAction.h */,
+				22B201CF15F6C1FD00394FE8 /* GMNoOpAction.m */,
+				22B201C615F6C1FD00394FE8 /* GMRemoveBlackboardKeyAction.h */,
+				22B201C715F6C1FD00394FE8 /* GMRemoveBlackboardKeyAction.m */,
+				22B201DF15F6C1FE00394FE8 /* GMTimerAction.h */,
+				22B201E015F6C1FE00394FE8 /* GMTimerAction.m */,
+			);
+			name = Action;
+			sourceTree = "<group>";
+		};
+		22B2020715F6C6DF00394FE8 /* Decorator */ = {
+			isa = PBXGroup;
+			children = (
+				22B201C815F6C1FD00394FE8 /* GMDelayFilter.h */,
+				22B201C915F6C1FD00394FE8 /* GMDelayFilter.m */,
+				22B201CA15F6C1FD00394FE8 /* GMFlagDecorator.h */,
+				22B201CB15F6C1FD00394FE8 /* GMFlagDecorator.m */,
+				22B201CC15F6C1FD00394FE8 /* GMLoopingDecorator.h */,
+				22B201CD15F6C1FD00394FE8 /* GMLoopingDecorator.m */,
+				22B201D015F6C1FD00394FE8 /* GMNotDecorator.h */,
+				22B201D115F6C1FD00394FE8 /* GMNotDecorator.m */,
+				22B201D415F6C1FE00394FE8 /* GMPredicateFilter.h */,
+				22B201D515F6C1FE00394FE8 /* GMPredicateFilter.m */,
+				22B201D815F6C1FE00394FE8 /* GMSemaphoreGuardDecorator.h */,
+				22B201D915F6C1FE00394FE8 /* GMSemaphoreGuardDecorator.m */,
+			);
+			name = Decorator;
+			sourceTree = "<group>";
+		};
+		22B2020815F6C73E00394FE8 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				22B201B815F6C1FC00394FE8 /* GMBehaviorFactory.h */,
+				22B201B915F6C1FC00394FE8 /* GMBehaviorFactory.m */,
+				22B201C015F6C1FD00394FE8 /* GMTaskPrinter.h */,
+				22B201C115F6C1FD00394FE8 /* GMTaskPrinter.m */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		22B2020915F6C76900394FE8 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				22B201C215F6C1FD00394FE8 /* GMBlackboard.h */,
+				22B201C315F6C1FD00394FE8 /* GMBlackboard.m */,
+				22B201C415F6C1FD00394FE8 /* GMBlockTask.h */,
+				22B201C515F6C1FD00394FE8 /* GMBlockTask.m */,
+				22B201BA15F6C1FC00394FE8 /* GMSemaphore.h */,
+				22B201BB15F6C1FC00394FE8 /* GMSemaphore.m */,
+				22B201DC15F6C1FE00394FE8 /* GMStatefulTask+Protected.h */,
+				22B201DD15F6C1FE00394FE8 /* GMStatefulTask.h */,
+				22B201DE15F6C1FE00394FE8 /* GMStatefulTask.m */,
+				22B201BC15F6C1FC00394FE8 /* GMTask+Protected.h */,
+				22B201BD15F6C1FD00394FE8 /* GMTask.h */,
+				22B201BE15F6C1FD00394FE8 /* GMTask.m */,
+				22B201BF15F6C1FD00394FE8 /* GMTaskContainer.h */,
+			);
+			name = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
