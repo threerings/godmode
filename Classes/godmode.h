@@ -1,13 +1,7 @@
 //
-//  godmode.h
-//  godmode
-//
-//  Created by Tim on 9/4/12.
-//  Copyright (c) 2012 Three Rings. All rights reserved.
-//
+// godmode - Copyright 2012 Three Rings Design
 
-#import <Foundation/Foundation.h>
+// Master header file
 
-@interface godmode : NSObject
-
-@end
+// Dependencies
+#import "cooocoa.h"
