@@ -15,7 +15,6 @@
 		22B200D815F6B99300394FE8 /* libgodmode.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 22B200BF15F6B99300394FE8 /* libgodmode.a */; };
 		22B200DE15F6B99300394FE8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 22B200DC15F6B99300394FE8 /* InfoPlist.strings */; };
 		22B200E115F6B99300394FE8 /* godmodeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B200E015F6B99300394FE8 /* godmodeTests.m */; };
-		22B201A315F6BE6A00394FE8 /* libcooocoa.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 22B2018C15F6BE4400394FE8 /* libcooocoa.a */; };
 		22B201E315F6C1FE00394FE8 /* GMTaskFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B201B915F6C1FC00394FE8 /* GMTaskFactory.m */; };
 		22B201E415F6C1FE00394FE8 /* GMSemaphore.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B201BB15F6C1FC00394FE8 /* GMSemaphore.m */; };
 		22B201E515F6C1FE00394FE8 /* GMTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B201BE15F6C1FD00394FE8 /* GMTask.m */; };
@@ -151,7 +150,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22B201A315F6BE6A00394FE8 /* libcooocoa.a in Frameworks */,
 				22B200C315F6B99300394FE8 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

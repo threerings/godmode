@@ -5,14 +5,14 @@
 
 @implementation GMBlockTask
 
-- (id)initWithName:(NSString*)name block:(BehaviorTaskBlock)block {
+- (id)initWithName:(NSString*)name block:(GMTaskBlock)block {
     if ((self = [super initWithName:name])) {
         _block = [block copy];
     }
     return self;
 }
 
-- (id)initWithBlock:(BehaviorTaskBlock)block {
+- (id)initWithBlock:(GMTaskBlock)block {
     return [self initWithName:nil block:block];
 }
 

@@ -3,15 +3,15 @@
 
 #import "GMTask.h"
 
-typedef GMStatus (^BehaviorTaskBlock)(float dt);
+typedef GMStatus (^GMTaskBlock)(float dt);
 
 /// A task that runs a block
 @interface GMBlockTask : GMTask {
 @protected
-    BehaviorTaskBlock _block;
+    GMTaskBlock _block;
 }
 
-- (id)initWithName:(NSString*)name block:(BehaviorTaskBlock)block;
-- (id)initWithBlock:(BehaviorTaskBlock)block;
+- (id)initWithName:(NSString*)name block:(GMTaskBlock)block;
+- (id)initWithBlock:(GMTaskBlock)block;
 
 @end
