@@ -1,23 +1,22 @@
 //
-// nod - Copyright 2012 Three Rings Design
+// godmode - Copyright 2012 Three Rings Design
 
 #import "GMLoopingDecorator.h"
 #import "GMStatefulTask+Protected.h"
 
-static NSString* GetBreakConditionString (LoopBreakCondition until) {
-    switch (until) {
-        ENUM_STRING(LoopBreakNone);
-        ENUM_STRING(LoopBreakOnSuccess);
-        ENUM_STRING(LoopBreakOnFail);
+static NSString* GetTypeString (GMLoopType type) {
+    switch (type) {
+        ENUM_STRING(GM_BreakNever);
+        ENUM_STRING(GM_BreakOnSuccess);
+        ENUM_STRING(GM_BreakOnFail);
     }
 }
 
 @implementation GMLoopingDecorator
 
-- (id)initWithName:(NSString*)name breakCondition:(LoopBreakCondition)breakCondition
-         loopCount:(int)loopCount task:(GMTask*)task {
+- (id)initWithName:(NSString*)name type:(GMLoopType)type loopCount:(int)loopCount task:(GMTask*)task {
     if ((self = [super initWithName:name])) {
-        _breakCondition = breakCondition;
+        _type = type;
         _targetLoopCount = loopCount;
         _task = task;
     }
@@ -29,26 +28,26 @@ static NSString* GetBreakConditionString (LoopBreakCondition until) {
     [_task deactivate];
 }
 
-- (BehaviorStatus)update:(float)dt {
-    BehaviorStatus status = [_task updateTree:dt];
-    if (status == BehaviorRunning) {
-        return BehaviorRunning;
+- (GMStatus)update:(float)dt {
+    GMStatus status = [_task updateTree:dt];
+    if (status == GM_Running) {
+        return GM_Running;
     }
 
-    if ((_breakCondition == LoopBreakOnSuccess && status == BehaviorSuccess) ||
-        (_breakCondition == LoopBreakOnFail && status == BehaviorFail)) {
+    if ((_type == GM_BreakOnSuccess && status == GM_Success) ||
+        (_type == GM_BreakOnFail && status == GM_Fail)) {
         // break condition met
         return status;
     } else if (_targetLoopCount > 0 && ++_curLoopCount >= _targetLoopCount) {
         // hit the loop count
-        return BehaviorSuccess;
+        return GM_Success;
     } else {
-        return BehaviorRunning;
+        return GM_Running;
     }
 }
 
 - (NSString*)description {
-    return [NSString stringWithFormat:@"%@ %@", [super description], GetBreakConditionString(_breakCondition)];
+    return [NSString stringWithFormat:@"%@ %@", [super description], GetTypeString(_type)];
 }
 
 - (id<NSFastEnumeration>)children {

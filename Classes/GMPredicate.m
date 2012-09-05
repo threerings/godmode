@@ -1,5 +1,5 @@
 //
-// nod - Copyright 2012 Three Rings Design
+// godmode - Copyright 2012 Three Rings Design
 
 #import "GMPredicate.h"
 #import "GMTaskContainer.h"
@@ -71,8 +71,8 @@ typedef BOOL (^BoolBlock)();
     return NO;
 }
 
-- (BehaviorStatus)update:(float)dt {
-    return ([self evaluate] ? BehaviorSuccess : BehaviorFail);
+- (GMStatus)update:(float)dt {
+    return ([self evaluate] ? GM_Success : GM_Fail);
 }
 
 @end

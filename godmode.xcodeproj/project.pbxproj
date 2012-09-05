@@ -16,7 +16,7 @@
 		22B200DE15F6B99300394FE8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 22B200DC15F6B99300394FE8 /* InfoPlist.strings */; };
 		22B200E115F6B99300394FE8 /* godmodeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B200E015F6B99300394FE8 /* godmodeTests.m */; };
 		22B201A315F6BE6A00394FE8 /* libcooocoa.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 22B2018C15F6BE4400394FE8 /* libcooocoa.a */; };
-		22B201E315F6C1FE00394FE8 /* GMBehaviorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B201B915F6C1FC00394FE8 /* GMBehaviorFactory.m */; };
+		22B201E315F6C1FE00394FE8 /* GMTaskFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B201B915F6C1FC00394FE8 /* GMTaskFactory.m */; };
 		22B201E415F6C1FE00394FE8 /* GMSemaphore.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B201BB15F6C1FC00394FE8 /* GMSemaphore.m */; };
 		22B201E515F6C1FE00394FE8 /* GMTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B201BE15F6C1FD00394FE8 /* GMTask.m */; };
 		22B201E615F6C1FE00394FE8 /* GMTaskPrinter.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B201C115F6C1FD00394FE8 /* GMTaskPrinter.m */; };
@@ -97,8 +97,8 @@
 		22B200E015F6B99300394FE8 /* godmodeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = godmodeTests.m; sourceTree = "<group>"; };
 		22B200F215F6BA3000394FE8 /* godmode_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = godmode_Prefix.pch; sourceTree = "<group>"; };
 		22B2014915F6BC5900394FE8 /* cooocoa.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cooocoa.xcodeproj; path = ../cooocoa.xcodeproj; sourceTree = COOOCOA_SRC; };
-		22B201B815F6C1FC00394FE8 /* GMBehaviorFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMBehaviorFactory.h; sourceTree = "<group>"; };
-		22B201B915F6C1FC00394FE8 /* GMBehaviorFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMBehaviorFactory.m; sourceTree = "<group>"; };
+		22B201B815F6C1FC00394FE8 /* GMTaskFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMTaskFactory.h; sourceTree = "<group>"; };
+		22B201B915F6C1FC00394FE8 /* GMTaskFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMTaskFactory.m; sourceTree = "<group>"; };
 		22B201BA15F6C1FC00394FE8 /* GMSemaphore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMSemaphore.h; sourceTree = "<group>"; };
 		22B201BB15F6C1FC00394FE8 /* GMSemaphore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMSemaphore.m; sourceTree = "<group>"; };
 		22B201BC15F6C1FC00394FE8 /* GMTask+Protected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GMTask+Protected.h"; sourceTree = "<group>"; };
@@ -312,8 +312,8 @@
 		22B2020815F6C73E00394FE8 /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				22B201B815F6C1FC00394FE8 /* GMBehaviorFactory.h */,
-				22B201B915F6C1FC00394FE8 /* GMBehaviorFactory.m */,
+				22B201B815F6C1FC00394FE8 /* GMTaskFactory.h */,
+				22B201B915F6C1FC00394FE8 /* GMTaskFactory.m */,
 				22B201C015F6C1FD00394FE8 /* GMTaskPrinter.h */,
 				22B201C115F6C1FD00394FE8 /* GMTaskPrinter.m */,
 			);
@@ -463,7 +463,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22B201E315F6C1FE00394FE8 /* GMBehaviorFactory.m in Sources */,
+				22B201E315F6C1FE00394FE8 /* GMTaskFactory.m in Sources */,
 				22B201E415F6C1FE00394FE8 /* GMSemaphore.m in Sources */,
 				22B201E515F6C1FE00394FE8 /* GMTask.m in Sources */,
 				22B201E615F6C1FE00394FE8 /* GMTaskPrinter.m in Sources */,

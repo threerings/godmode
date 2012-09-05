@@ -1,5 +1,5 @@
 //
-// nod - Copyright 2012 Three Rings Design
+// godmode - Copyright 2012 Three Rings Design
 
 #import "GMDelayFilter.h"
 #import "GMStatefulTask+Protected.h"
@@ -32,7 +32,7 @@
     }
 }
 
-- (BehaviorStatus)update:(float)dt {
+- (GMStatus)update:(float)dt {
     if (!_inited) {
         _curDelay = _minDelay.next;
         _inited = YES;
@@ -42,15 +42,15 @@
 
     if (!_taskRunning && ((now - _lastCompletionTime) < _curDelay)) {
         // can't run
-        return BehaviorFail;
+        return GM_Fail;
     }
 
-    BehaviorStatus status = [_task updateTree:dt];
-    _taskRunning = (status == BehaviorRunning);
+    GMStatus status = [_task updateTree:dt];
+    _taskRunning = (status == GM_Running);
     if (!_taskRunning) {
         _inited = NO;
     }
-    if (status == BehaviorSuccess) {
+    if (status == GM_Success) {
         _lastCompletionTime = now;
     }
     return status;

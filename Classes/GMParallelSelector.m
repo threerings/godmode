@@ -1,32 +1,28 @@
 //
-// nod - Copyright 2012 Three Rings Design
+// godmode - Copyright 2012 Three Rings Design
 
 #import "GMParallelSelector.h"
 #import "GMStatefulTask+Protected.h"
 
-static NSString* GetBreakConditionString (ParallelExitCondition until) {
-    switch (until) {
-        ENUM_STRING(PEC_ALL_SUCCESS);
-        ENUM_STRING(PEC_ANY_SUCCESS);
-        ENUM_STRING(PEC_ALL_FAIL);
-        ENUM_STRING(PEC_ANY_FAIL);
-        ENUM_STRING(PEC_ALL_COMPLETE);
-        ENUM_STRING(PEC_ANY_COMPLETE);
+static NSString* GetTypeString (GMParallelSelectorType type) {
+    switch (type) {
+        ENUM_STRING(GM_AllSuccess);
+        ENUM_STRING(GM_AnySuccess);
+        ENUM_STRING(GM_AllFail);
+        ENUM_STRING(GM_AnyFail);
+        ENUM_STRING(GM_AllComplete);
+        ENUM_STRING(GM_AnyComplete);
     }
 }
 
 @implementation GMParallelSelector
 
-- (id)initWithName:(NSString*)name until:(ParallelExitCondition)until children:(NSArray*)children {
+- (id)initWithName:(NSString*)name type:(GMParallelSelectorType)type children:(NSArray*)children {
     if ((self = [super initWithName:name])) {
-        _until = until;
+        _type = type;
         _children = children;
     }
     return self;
-}
-
-- (id)init:(ParallelExitCondition)until children:(NSArray*)children {
-    return [self initWithName:nil until:until children:children];
 }
 
 - (void)reset {
@@ -35,33 +31,33 @@ static NSString* GetBreakConditionString (ParallelExitCondition until) {
     }
 }
 
-- (BehaviorStatus)update:(float)dt {
+- (GMStatus)update:(float)dt {
     BOOL runningChildren = NO;
     for (GMTask* child in _children) {
-        BehaviorStatus childStatus = [child updateTree:dt];
-        if (childStatus == BehaviorSuccess) {
-            if (_until == PEC_ANY_SUCCESS || _until == PEC_ANY_COMPLETE) {
-                return BehaviorSuccess;
-            } else if (_until == PEC_ALL_FAIL) {
-                return BehaviorFail;
+        GMStatus childStatus = [child updateTree:dt];
+        if (childStatus == GM_Success) {
+            if (_type == GM_AnySuccess || _type == GM_AnyComplete) {
+                return GM_Success;
+            } else if (_type == GM_AllFail) {
+                return GM_Fail;
             }
 
-        } else if (childStatus == BehaviorFail) {
-            if (_until == PEC_ANY_FAIL || _until == PEC_ANY_COMPLETE) {
-                return BehaviorSuccess;
-            } else if (_until == PEC_ALL_SUCCESS) {
-                return BehaviorFail;
+        } else if (childStatus == GM_Fail) {
+            if (_type == GM_AnyFail || _type == GM_AnyComplete) {
+                return GM_Success;
+            } else if (_type == GM_AllSuccess) {
+                return GM_Fail;
             }
         } else {
             runningChildren = YES;
         }
     }
 
-    return (runningChildren ? BehaviorRunning : BehaviorSuccess);
+    return (runningChildren ? GM_Running : GM_Success);
 }
 
 - (NSString*)description {
-    return [NSString stringWithFormat:@"%@:%@", [super description], GetBreakConditionString(_until)];
+    return [NSString stringWithFormat:@"%@:%@", [super description], GetTypeString(_type)];
 }
 
 - (id<NSFastEnumeration>)children {

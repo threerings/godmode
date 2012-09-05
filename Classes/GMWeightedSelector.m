@@ -1,10 +1,10 @@
 //
-// nod - Copyright 2012 Three Rings Design
+// godmode - Copyright 2012 Three Rings Design
 
 #import "GMWeightedSelector.h"
 #import "GMStatefulTask+Protected.h"
 
-@interface WeightedTask () {
+@interface GMWeightedTask () {
 @public
     GMTask* task;
     float weight;
@@ -13,9 +13,9 @@
 }
 @end
 
-@implementation WeightedTask
-+ (WeightedTask*)withTask:(GMTask*)task weight:(float)weight {
-    WeightedTask* wt = [[WeightedTask alloc] init];
+@implementation GMWeightedTask
++ (GMWeightedTask*)withTask:(GMTask*)task weight:(float)weight {
+    GMWeightedTask* wt = [[GMWeightedTask alloc] init];
     wt->task = task;
     wt->weight = weight;
     return wt;
@@ -32,10 +32,6 @@
     return self;
 }
 
-- (id)initWithRands:(OOORandoms*)rands children:(NSArray*)children {
-    return [self initWithName:nil rands:rands children:children];
-}
-
 - (void)reset {
     if (_curChild != nil) {
         [_curChild->task deactivate];
@@ -43,10 +39,10 @@
     }
 }
 
-- (WeightedTask*)chooseNextChild {
-    WeightedTask* pick = nil;
+- (GMWeightedTask*)chooseNextChild {
+    GMWeightedTask* pick = nil;
     float total = 0;
-    for (WeightedTask* child in _children) {
+    for (GMWeightedTask* child in _children) {
         if (!child->skip) {
             total += child->weight;
             if (pick == nil || [_rands getFloat:total] < child->weight) {
@@ -58,24 +54,24 @@
 }
 
 - (void)resetSkippedStatus {
-    for (WeightedTask* child in _children) {
+    for (GMWeightedTask* child in _children) {
         child->skip = NO;
     }
 }
 
-- (BehaviorStatus)update:(float)dt {
+- (GMStatus)update:(float)dt {
     // Are we already running a task?
     if (_curChild != nil) {
-        BehaviorStatus status = [_curChild->task updateTree:dt];
+        GMStatus status = [_curChild->task updateTree:dt];
 
         // The task completed
-        if (status != BehaviorRunning) {
+        if (status != GM_Running) {
             _curChild = nil;
         }
 
         // Exit immediately, unless our task failed, in which case
         // we'll try to select another task, below
-        if (status != BehaviorFail) {
+        if (status != GM_Fail) {
             return status;
         }
     }
@@ -84,20 +80,20 @@
 
     int numTriedTasks = 0;
     while (numTriedTasks < _children.count) {
-        WeightedTask* child = [self chooseNextChild];
+        GMWeightedTask* child = [self chooseNextChild];
 
         numTriedTasks++;
         // Skip this task on our next call to chooseNextChild()
         child->skip = true;
 
-        BehaviorStatus status = [child->task updateTree:dt];
-        if (status == BehaviorRunning) {
+        GMStatus status = [child->task updateTree:dt];
+        if (status == GM_Running) {
             _curChild = child;
         }
 
         // Exit immediately, unless our task failed, in which case we'll
         // try to select another one
-        if (status != BehaviorFail) {
+        if (status != GM_Fail) {
             [self resetSkippedStatus];
             return status;
         }
@@ -106,11 +102,11 @@
     [self resetSkippedStatus];
 
     // All of our tasks failed.
-    return BehaviorFail;
+    return GM_Fail;
 }
 
 - (id<NSFastEnumeration>)children {
-    return [OOOCollections map:_children transformer:^GMTask* (WeightedTask* wt) {
+    return [OOOCollections map:_children transformer:^GMTask* (GMWeightedTask* wt) {
         return wt->task;
     }];
 }

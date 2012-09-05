@@ -1,26 +1,25 @@
 //
-// nod - Copyright 2012 Three Rings Design
+// godmode - Copyright 2012 Three Rings Design
 
 #import "GMStatefulTask.h"
 #import "GMTaskContainer.h"
 
 typedef enum {
-    PEC_ALL_SUCCESS,    // SUCCESS if all succeed. FAIL if any fail.
-    PEC_ANY_SUCCESS,    // SUCCESS if any succeed. FAIL if all fail.
-    PEC_ALL_FAIL,       // SUCCESS if all fail. FAIL if any succeed.
-    PEC_ANY_FAIL,       // SUCCESS if any fail. FAIL if all succeed.
-    PEC_ALL_COMPLETE,   // SUCCESS when all succeed or fail.
-    PEC_ANY_COMPLETE    // SUCCESS when any succeeds or fails.
-} ParallelExitCondition;
+    GM_AllSuccess = 0,  // SUCCESS if all succeed. FAIL if any fail.
+    GM_AnySuccess,      // SUCCESS if any succeed. FAIL if all fail.
+    GM_AllFail,         // SUCCESS if all fail. FAIL if any succeed.
+    GM_AnyFail,         // SUCCESS if any fail. FAIL if all succeed.
+    GM_AllComplete,     // SUCCESS when all succeed or fail.
+    GM_AnyComplete      // SUCCESS when any succeeds or fails.
+} GMParallelSelectorType;
 
 
 /// A selector that executes all children, every update, until a condition is met.
 @interface GMParallelSelector : GMStatefulTask <GMTaskContainer> {
-    ParallelExitCondition _until;
+    GMParallelSelectorType _type;
     NSArray* _children;
 }
 
-- (id)initWithName:(NSString*)name until:(ParallelExitCondition)until children:(NSArray*)children;
-- (id)init:(ParallelExitCondition)until children:(NSArray*)children;
+- (id)initWithName:(NSString*)name type:(GMParallelSelectorType)type children:(NSArray*)children;
 
 @end

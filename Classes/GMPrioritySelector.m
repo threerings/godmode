@@ -1,5 +1,5 @@
 //
-// nod - Copyright 2012 Three Rings Design
+// godmode - Copyright 2012 Three Rings Design
 
 #import "GMPrioritySelector.h"
 #import "GMStatefulTask+Protected.h"
@@ -24,14 +24,14 @@
     }
 }
 
-- (BehaviorStatus)update:(float)dt {
+- (GMStatus)update:(float)dt {
     // Iterate all children till we find one that doesn't fail.
-    BehaviorStatus status = BehaviorSuccess;
+    GMStatus status = GM_Success;
     for (GMTask* task in _children) {
         status = [task updateTree:dt];
 
         // if the child succeeded, or is still running, we'll exit the loop
-        if (status != BehaviorFail) {
+        if (status != GM_Fail) {
             // Did we interrupt a lower-priority task that was already running?
             // nb: the lower-priority task will be deactivated *after* the higher-priority
             // one is activated
@@ -39,7 +39,7 @@
                 [_runningTask deactivate];
             }
 
-            _runningTask = (status == BehaviorRunning ? task : nil);
+            _runningTask = (status == GM_Running ? task : nil);
             break;
         }
     }

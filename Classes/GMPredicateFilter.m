@@ -1,5 +1,5 @@
 //
-// nod - Copyright 2012 Three Rings Design
+// godmode - Copyright 2012 Three Rings Design
 
 #import "GMPredicateFilter.h"
 #import "GMPredicate.h"
@@ -19,9 +19,9 @@
     [_task deactivate];
 }
 
-- (BehaviorStatus)update:(float)dt {
+- (GMStatus)update:(float)dt {
     if (!_pred.evaluate) {
-        return BehaviorFail;
+        return GM_Fail;
     }
     return [_task updateTree:dt];
 }

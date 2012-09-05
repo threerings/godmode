@@ -1,5 +1,5 @@
 //
-// nod - Copyright 2012 Three Rings Design
+// godmode - Copyright 2012 Three Rings Design
 
 #import "GMSemaphoreGuardDecorator.h"
 #import "GMStatefulTask+Protected.h"
@@ -23,11 +23,11 @@
     [_task deactivate];
 }
 
-- (BehaviorStatus)update:(float)dt {
+- (GMStatus)update:(float)dt {
     if (!_semaphoreAcquired) {
         _semaphoreAcquired = [_semaphore acquire];
         if (!_semaphoreAcquired) {
-            return BehaviorFail;
+            return GM_Fail;
         }
     }
 

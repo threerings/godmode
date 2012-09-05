@@ -1,5 +1,5 @@
 //
-// nod - Copyright 2012 Three Rings Design
+// godmode - Copyright 2012 Three Rings Design
 
 #import "GMSequenceSelector.h"
 #import "GMStatefulTask+Protected.h"
@@ -25,11 +25,11 @@
     _childIdx = 0;
 }
 
-- (BehaviorStatus)update:(float)dt {
+- (GMStatus)update:(float)dt {
     while (_childIdx < _children.count) {
         _curChild = [_children objectAtIndex:_childIdx];
-        BehaviorStatus childStatus = [_curChild updateTree:dt];
-        if (childStatus == BehaviorSuccess) {
+        GMStatus childStatus = [_curChild updateTree:dt];
+        if (childStatus == GM_Success) {
             // the child completed. Move on the to the next one.
             _curChild = nil;
             _childIdx++;
@@ -40,7 +40,7 @@
     }
 
     // All our children have completed successfully
-    return BehaviorSuccess;
+    return GM_Success;
 }
 
 - (id<NSFastEnumeration>)children {

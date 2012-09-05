@@ -1,5 +1,5 @@
 //
-// nod - Copyright 2012 Three Rings Design
+// godmode - Copyright 2012 Three Rings Design
 
 #import "GMStatefulTask+Protected.h"
 
@@ -13,9 +13,9 @@
     return [self initWithName:nil];
 }
 
-- (BehaviorStatus)updateTree:(float)dt {
+- (GMStatus)updateTree:(float)dt {
     _lastStatus = [self update:dt];
-    _running = (_lastStatus == BehaviorRunning);
+    _running = (_lastStatus == GM_Running);
     if (!_running) {
         [self reset];
     }

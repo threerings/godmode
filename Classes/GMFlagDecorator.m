@@ -1,5 +1,5 @@
 //
-// nod - Copyright 2012 Three Rings Design
+// godmode - Copyright 2012 Three Rings Design
 
 #import "GMFlagDecorator.h"
 #import "GMStatefulTask+Protected.h"
@@ -20,7 +20,7 @@
     [_flags clearFlag:_flag];
 }
 
-- (BehaviorStatus)update:(float)dt {
+- (GMStatus)update:(float)dt {
     [_flags setFlag:_flag];
     return [_task updateTree:dt];
 }

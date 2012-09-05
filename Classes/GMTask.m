@@ -1,14 +1,14 @@
 //
-// nod - Copyright 2012 Three Rings Design
+// godmode - Copyright 2012 Three Rings Design
 
 #import "GMTask+Protected.h"
 #import "GMTaskPrinter.h"
 
-static NSString* GetStatusString (BehaviorStatus status) {
+static NSString* GetStatusString (GMStatus status) {
     switch (status) {
-    case BehaviorRunning:   return @"RUNNING";
-    case BehaviorSuccess:   return @"SUCCESS";
-    case BehaviorFail:      return @"FAIL";
+    case GM_Running:   return @"RUNNING";
+    case GM_Success:   return @"SUCCESS";
+    case GM_Fail:      return @"FAIL";
     default:                return @"NEVER_RUN";
     }
 }
@@ -26,12 +26,12 @@ static NSString* GetStatusString (BehaviorStatus status) {
     return self;
 }
 
-- (BehaviorStatus)updateTree:(float)dt {
+- (GMStatus)updateTree:(float)dt {
     _lastStatus = [self update:dt];
     return _lastStatus;
 }
 
-- (BehaviorStatus)update:(float)dt { return BehaviorSuccess; }
+- (GMStatus)update:(float)dt { return GM_Success; }
 
 - (void)deactivate {}
 

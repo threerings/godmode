@@ -1,7 +1,7 @@
 //
-// nod - Copyright 2012 Three Rings Design
+// godmode - Copyright 2012 Three Rings Design
 
-#import "GMBehaviorFactory.h"
+#import "GMTaskFactory.h"
 #import "GMNotDecorator.h"
 #import "GMParallelSelector.h"
 #import "GMPrioritySelector.h"
@@ -17,7 +17,7 @@
 
 #import "GMFlagSetPredicate.h"
 
-@implementation GMBehaviorFactory
+@implementation GMTaskFactory
 
 - (float)curTime {
     OOO_IS_ABSTRACT();
@@ -56,38 +56,38 @@
 
 /// Parallel
 - (GMTask*)named:(NSString*)name parallel:(GMTask*)child, ... {
-    return [[GMParallelSelector alloc] initWithName:name until:PEC_ALL_COMPLETE children:OOO_VARARGS_TO_ARRAY(GMTask*, child)];
+    return [[GMParallelSelector alloc] initWithName:name type:GM_AllComplete children:OOO_VARARGS_TO_ARRAY(GMTask*, child)];
 }
 
 - (GMTask*)parallel:(GMTask*)child, ... {
-    return [[GMParallelSelector alloc] init:PEC_ALL_COMPLETE children:OOO_VARARGS_TO_ARRAY(GMTask*, child)];
+    return [[GMParallelSelector alloc] initWithName:nil type:GM_AllComplete children:OOO_VARARGS_TO_ARRAY(GMTask*, child)];
 }
 
 /// Loop forever
 - (GMTask*)named:(NSString*)name loop:(GMTask*)task {
-    return [[GMLoopingDecorator alloc] initWithName:name breakCondition:LoopBreakNone loopCount:0 task:task];
+    return [[GMLoopingDecorator alloc] initWithName:name type:GM_BreakNever loopCount:0 task:task];
 }
 
 - (GMTask*)loop:(GMTask*)task {
-    return [[GMLoopingDecorator alloc] initWithName:nil breakCondition:LoopBreakNone loopCount:0 task:task];
+    return [[GMLoopingDecorator alloc] initWithName:nil type:GM_BreakNever loopCount:0 task:task];
 }
 
 // Loop X Times
 - (GMTask*)named:(NSString*)name withLoopCount:(int)loopCount loop:(GMTask*)task {
-    return [[GMLoopingDecorator alloc] initWithName:name breakCondition:LoopBreakNone loopCount:loopCount task:task];
+    return [[GMLoopingDecorator alloc] initWithName:name type:GM_BreakNever loopCount:loopCount task:task];
 }
 
 - (GMTask*)withLoopCount:(int)loopCount loop:(GMTask*)task {
-    return [[GMLoopingDecorator alloc] initWithName:nil breakCondition:LoopBreakNone loopCount:loopCount task:task];
+    return [[GMLoopingDecorator alloc] initWithName:nil type:GM_BreakNever loopCount:loopCount task:task];
 }
 
 /// Loop until
-- (GMTask*)named:(NSString*)name withBreakCondition:(LoopBreakCondition)exitCondition loop:(GMTask*)task {
-    return [[GMLoopingDecorator alloc] initWithName:name breakCondition:exitCondition loopCount:0 task:task];
+- (GMTask*)named:(NSString*)name withLoopType:(GMLoopType)exitCondition loop:(GMTask*)task {
+    return [[GMLoopingDecorator alloc] initWithName:name type:exitCondition loopCount:0 task:task];
 }
 
-- (GMTask*)withBreakCondition:(LoopBreakCondition)exitCondition loop:(GMTask*)task {
-    return [[GMLoopingDecorator alloc] initWithName:nil breakCondition:exitCondition loopCount:0 task:task];
+- (GMTask*)withLoopType:(GMLoopType)exitCondition loop:(GMTask*)task {
+    return [[GMLoopingDecorator alloc] initWithName:nil type:exitCondition loopCount:0 task:task];
 }
 
 /// Priority
@@ -109,20 +109,20 @@
 }
 
 /// Weighted
-- (GMTask*)named:(NSString*)name withRands:(OOORandoms*)rands selectWithWeight:(WeightedTask*)child, ... {
-    return [[GMWeightedSelector alloc] initWithName:name rands:rands children:OOO_VARARGS_TO_ARRAY(WeightedTask*, child)];
+- (GMTask*)named:(NSString*)name withRands:(OOORandoms*)rands selectWithWeight:(GMWeightedTask*)child, ... {
+    return [[GMWeightedSelector alloc] initWithName:name rands:rands children:OOO_VARARGS_TO_ARRAY(GMWeightedTask*, child)];
 }
 
-- (GMTask*)withRands:(OOORandoms*)rands selectWithWeight:(WeightedTask*)child, ... {
-    return [[GMWeightedSelector alloc] initWithRands:rands children:OOO_VARARGS_TO_ARRAY(WeightedTask*, child)];
+- (GMTask*)withRands:(OOORandoms*)rands selectWithWeight:(GMWeightedTask*)child, ... {
+    return [[GMWeightedSelector alloc] initWithName:nil rands:rands children:OOO_VARARGS_TO_ARRAY(GMWeightedTask*, child)];
 }
 
 /// Block
-- (GMTask*)named:(NSString*)name block:(BehaviorStatus (^)(float))block {
+- (GMTask*)named:(NSString*)name block:(GMStatus (^)(float))block {
     return [[GMBlockTask alloc] initWithName:name block:block];
 }
 
-- (GMTask*)block:(BehaviorStatus (^)(float))block {
+- (GMTask*)block:(GMStatus (^)(float))block {
     return [[GMBlockTask alloc] initWithBlock:block];
 }
 

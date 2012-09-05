@@ -1,5 +1,5 @@
 //
-// nod - Copyright 2012 Three Rings Design
+// godmode - Copyright 2012 Three Rings Design
 
 #import "GMNotDecorator.h"
 #import "GMStatefulTask+Protected.h"
@@ -21,12 +21,12 @@
     [_task deactivate];
 }
 
-- (BehaviorStatus)update:(float)dt {
-    BehaviorStatus status = [_task updateTree:dt];
+- (GMStatus)update:(float)dt {
+    GMStatus status = [_task updateTree:dt];
     switch (status) {
-    case BehaviorSuccess: return BehaviorFail;
-    case BehaviorFail: return BehaviorSuccess;
-    case BehaviorRunning: return BehaviorRunning;
+    case GM_Success: return GM_Fail;
+    case GM_Fail: return GM_Success;
+    case GM_Running: return GM_Running;
     }
 }
 

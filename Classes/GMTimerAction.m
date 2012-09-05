@@ -1,5 +1,5 @@
 //
-// nod - Copyright 2012 Three Rings Design
+// godmode - Copyright 2012 Three Rings Design
 
 #import "GMTimerAction.h"
 #import "GMStatefulTask+Protected.h"
@@ -21,9 +21,9 @@
     _elapsedTime = 0;
 }
 
-- (BehaviorStatus)update:(float)dt {
+- (GMStatus)update:(float)dt {
     _elapsedTime += dt;
-    return (_elapsedTime >= _totalTime ? BehaviorSuccess : BehaviorRunning);
+    return (_elapsedTime >= _totalTime ? GM_Success : GM_Running);
 }
 
 @end

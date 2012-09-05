@@ -1,5 +1,5 @@
 //
-// nod - Copyright 2012 Three Rings Design
+// godmode - Copyright 2012 Three Rings Design
 
 #import "GMBlockTask.h"
 
@@ -16,7 +16,7 @@
     return [self initWithName:nil block:block];
 }
 
-- (BehaviorStatus)update:(float)dt {
+- (GMStatus)update:(float)dt {
     return _block(dt);
 }
 

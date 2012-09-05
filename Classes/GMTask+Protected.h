@@ -1,5 +1,5 @@
 //
-// nod - Copyright 2012 Three Rings Design
+// godmode - Copyright 2012 Three Rings Design
 
 #import "GMTask.h"
 
@@ -8,7 +8,7 @@
 @interface GMTask (protected)
 
 /// Subclasses should override this function to update the behavior logic.
-- (BehaviorStatus)update:(float)dt;
+- (GMStatus)update:(float)dt;
 
 - (NSString*)description;
 - (NSString*)statusString;

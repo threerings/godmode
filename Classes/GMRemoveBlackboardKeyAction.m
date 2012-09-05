@@ -1,5 +1,5 @@
 //
-// nod - Copyright 2012 Three Rings Design
+// godmode - Copyright 2012 Three Rings Design
 
 #import "GMRemoveBlackboardKeyAction.h"
 #import "GMTask+Protected.h"
@@ -15,14 +15,14 @@
     return self;
 }
 
-- (BehaviorStatus)update:(float)dt {
+- (GMStatus)update:(float)dt {
     GMBlackboard* bb = _blackboard;
     if (bb == nil) {
-        return BehaviorFail;
+        return GM_Fail;
     }
 
     [bb removeKey:_key];
-    return BehaviorSuccess;
+    return GM_Success;
 }
 
 @end

@@ -1,5 +1,5 @@
 //
-// nod - Copyright 2012 Three Rings Design
+// godmode - Copyright 2012 Three Rings Design
 
 #import "GMLoopingDecorator.h"
 #import "GMWeightedSelector.h"
@@ -8,7 +8,7 @@
 
 @class GMBlackboard;
 
-@interface GMBehaviorFactory : NSObject
+@interface GMTaskFactory : NSObject
 
 /// Runs the given task if its predicates succeed
 - (GMTask*)named:(NSString*)name if:(GMPredicate*)pred do:(GMTask*)task;
@@ -31,8 +31,8 @@
 - (GMTask*)withLoopCount:(int)loopCount loop:(GMTask*)task;
 
 /// Loops a task until a condition is met
-- (GMTask*)named:(NSString*)name withBreakCondition:(LoopBreakCondition)exitCondition loop:(GMTask*)task;
-- (GMTask*)withBreakCondition:(LoopBreakCondition)exitCondition loop:(GMTask*)task;
+- (GMTask*)named:(NSString*)name withLoopType:(GMLoopType)loopType loop:(GMTask*)task;
+- (GMTask*)withLoopType:(GMLoopType)loopType loop:(GMTask*)task;
 
 /// Runs a task, and ensures that it won't be re-run until a minimum amount of time has elapsed
 - (GMTask*)named:(NSString*)name withRepeatDelay:(OOOFloatRange*)minDelay do:(GMTask*)task;
@@ -44,16 +44,16 @@
 - (GMTask*)selectWithPriority:(GMTask*)child, ... NS_REQUIRES_NIL_TERMINATION;
 
 /// Randomly selects a task to run
-- (GMTask*)named:(NSString*)name withRands:(OOORandoms*)rands selectWithWeight:(WeightedTask*)child, ... NS_REQUIRES_NIL_TERMINATION;
-- (GMTask*)withRands:(OOORandoms*)rands selectWithWeight:(WeightedTask*)child, ... NS_REQUIRES_NIL_TERMINATION;
+- (GMTask*)named:(NSString*)name withRands:(OOORandoms*)rands selectWithWeight:(GMWeightedTask*)child, ... NS_REQUIRES_NIL_TERMINATION;
+- (GMTask*)withRands:(OOORandoms*)rands selectWithWeight:(GMWeightedTask*)child, ... NS_REQUIRES_NIL_TERMINATION;
 
 /// Waits a specified amount of time
 - (GMTask*)named:(NSString*)name wait:(float)time;
 - (GMTask*)wait:(float)time;
 
 /// Runs a block
-- (GMTask*)named:(NSString*)name block:(BehaviorStatus(^)(float dt))block;
-- (GMTask*)block:(BehaviorStatus(^)(float dt))block;
+- (GMTask*)named:(NSString*)name block:(GMStatus(^)(float dt))block;
+- (GMTask*)block:(GMStatus(^)(float dt))block;
 
 /// Runs a task, and sets a flag while it's running
 - (GMTask*)named:(NSString*)name withFlags:(OOOMutableFlags*)flags setFlag:(int)flag while:(GMTask*)task;
