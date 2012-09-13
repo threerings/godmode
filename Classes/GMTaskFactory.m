@@ -51,7 +51,7 @@
 }
 
 - (GMTask*)sequence:(GMTask*)child, ... {
-    return [[GMSequenceSelector alloc] initWithChildren:OOO_VARARGS_TO_ARRAY(GMTask*, child)];
+    return [[GMSequenceSelector alloc] initWithName:nil children:OOO_VARARGS_TO_ARRAY(GMTask*, child)];
 }
 
 /// Parallel

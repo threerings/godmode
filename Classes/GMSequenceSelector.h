@@ -14,6 +14,5 @@
 }
 
 - (id)initWithName:(NSString*)name children:(NSArray*)children;
-- (id)initWithChildren:(NSArray*)children;
 
 @end
