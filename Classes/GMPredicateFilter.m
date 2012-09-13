@@ -20,7 +20,8 @@
 }
 
 - (GMStatus)update:(float)dt {
-    if (!_pred.evaluate) {
+    // call [pred updateTree] so that the predicate's _lastStatus gets set
+    if ([_pred updateTree:dt] != GM_Success) {
         return GM_Fail;
     }
     return [_task updateTree:dt];
