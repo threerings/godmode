@@ -11,6 +11,5 @@
 }
 
 - (id)initWithName:(NSString*)name time:(float)time;
-- (id)initWithTime:(float)time;
 
 @end

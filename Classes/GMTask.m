@@ -9,7 +9,7 @@ static NSString* GetStatusString (GMStatus status) {
     case GM_Running:   return @"RUNNING";
     case GM_Success:   return @"SUCCESS";
     case GM_Fail:      return @"FAIL";
-    default:                return @"NEVER_RUN";
+    default:           return @"NEVER_RUN";
     }
 }
 

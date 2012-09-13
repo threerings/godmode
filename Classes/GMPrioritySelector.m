@@ -13,10 +13,6 @@
     return self;
 }
 
-- (id)initWithChildren:(NSArray*)children {
-    return [self initWithName:nil children:children];
-}
-
 - (void)reset {
     if (_runningTask != nil) {
         [_runningTask deactivate];

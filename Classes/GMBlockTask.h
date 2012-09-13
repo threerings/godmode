@@ -12,6 +12,5 @@ typedef GMStatus (^GMTaskBlock)(float dt);
 }
 
 - (id)initWithName:(NSString*)name block:(GMTaskBlock)block;
-- (id)initWithBlock:(GMTaskBlock)block;
 
 @end

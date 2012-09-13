@@ -13,10 +13,6 @@
     return self;
 }
 
-- (id)initWithTime:(float)time {
-    return [self initWithName:nil time:time];
-}
-
 - (void)reset {
     _elapsedTime = 0;
 }

@@ -96,7 +96,7 @@
 }
 
 - (GMTask*)selectWithPriority:(GMTask*)child, ... {
-    return [[GMPrioritySelector alloc] initWithChildren:OOO_VARARGS_TO_ARRAY(GMTask*, child)];
+    return [[GMPrioritySelector alloc] initWithName:nil children:OOO_VARARGS_TO_ARRAY(GMTask*, child)];
 }
 
 /// Wait
@@ -105,7 +105,7 @@
 }
 
 - (GMTask*)wait:(float)time {
-    return [[GMTimerAction alloc] initWithTime:time];
+    return [[GMTimerAction alloc] initWithName:nil time:time];
 }
 
 /// Weighted
@@ -123,7 +123,7 @@
 }
 
 - (GMTask*)block:(GMStatus (^)(float))block {
-    return [[GMBlockTask alloc] initWithBlock:block];
+    return [[GMBlockTask alloc] initWithName:nil block:block];
 }
 
 /// FlagDecorator

@@ -12,10 +12,6 @@
     return self;
 }
 
-- (id)initWithBlock:(GMTaskBlock)block {
-    return [self initWithName:nil block:block];
-}
-
 - (GMStatus)update:(float)dt {
     return _block(dt);
 }
