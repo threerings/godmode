@@ -49,15 +49,15 @@
 }
 
 - (void)setBool:(BOOL)value forKey:(NSString*)key {
-    [self setObject:[NSNumber numberWithBool:value] forKey:key];
+    [self setObject:@(value) forKey:key];
 }
 
 - (void)setInt:(int)value forKey:(NSString*)key {
-    [self setObject:[NSNumber numberWithInt:value] forKey:key];
+    [self setObject:@(value) forKey:key];
 }
 
 - (void)setFloat:(float)value forKey:(NSString*)key {
-    [self setObject:[NSNumber numberWithFloat:value] forKey:key];
+    [self setObject:@(value) forKey:key];
 }
 
 @end
