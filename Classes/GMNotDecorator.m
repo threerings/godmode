@@ -31,7 +31,7 @@
 }
 
 - (id<NSFastEnumeration>)children {
-    return [OOOCollections singleton:_task];
+    return @[_task];
 }
 
 @end

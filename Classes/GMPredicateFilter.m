@@ -28,7 +28,7 @@
 }
 
 - (id<NSFastEnumeration>)children {
-    return [NSArray arrayWithObjects:_pred, _task, nil];
+    return @[_pred, _task];
 }
 
 @end

@@ -14,7 +14,7 @@
 }
 
 - (BOOL)evaluate { return !_pred.evaluate; }
-- (id<NSFastEnumeration>)children { return [OOOCollections singleton:_pred]; }
+- (id<NSFastEnumeration>)children { return @[_pred]; }
 @end
 
 @implementation GMAndPredicate
