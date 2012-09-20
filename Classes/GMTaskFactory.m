@@ -46,21 +46,21 @@
 }
 
 /// Sequence
-- (GMTask*)named:(NSString*)name sequence:(GMTask*)child, ... {
-    return [[GMSequenceSelector alloc] initWithName:name children:OOO_VARARGS_TO_ARRAY(GMTask*, child)];
+- (GMTask*)named:(NSString*)name sequence:(NSArray*)children {
+    return [[GMSequenceSelector alloc] initWithName:name children:children];
 }
 
-- (GMTask*)sequence:(GMTask*)child, ... {
-    return [[GMSequenceSelector alloc] initWithName:nil children:OOO_VARARGS_TO_ARRAY(GMTask*, child)];
+- (GMTask*)sequence:(NSArray*)children {
+    return [[GMSequenceSelector alloc] initWithName:nil children:children];
 }
 
 /// Parallel
-- (GMTask*)named:(NSString*)name parallel:(GMTask*)child, ... {
-    return [[GMParallelSelector alloc] initWithName:name type:GM_AllComplete children:OOO_VARARGS_TO_ARRAY(GMTask*, child)];
+- (GMTask*)named:(NSString*)name parallel:(NSArray*)children {
+    return [[GMParallelSelector alloc] initWithName:name type:GM_AllComplete children:children];
 }
 
-- (GMTask*)parallel:(GMTask*)child, ... {
-    return [[GMParallelSelector alloc] initWithName:nil type:GM_AllComplete children:OOO_VARARGS_TO_ARRAY(GMTask*, child)];
+- (GMTask*)parallel:(NSArray*)children {
+    return [[GMParallelSelector alloc] initWithName:nil type:GM_AllComplete children:children];
 }
 
 /// Loop forever
@@ -91,12 +91,12 @@
 }
 
 /// Priority
-- (GMTask*)named:(NSString*)name selectWithPriority:(GMTask*)child, ... {
-    return [[GMPrioritySelector alloc] initWithName:name children:OOO_VARARGS_TO_ARRAY(GMTask*, child)];
+- (GMTask*)named:(NSString*)name selectWithPriority:(NSArray*)children {
+    return [[GMPrioritySelector alloc] initWithName:name children:children];
 }
 
-- (GMTask*)selectWithPriority:(GMTask*)child, ... {
-    return [[GMPrioritySelector alloc] initWithName:nil children:OOO_VARARGS_TO_ARRAY(GMTask*, child)];
+- (GMTask*)selectWithPriority:(NSArray*)children {
+    return [[GMPrioritySelector alloc] initWithName:nil children:children];
 }
 
 /// Wait
@@ -109,12 +109,12 @@
 }
 
 /// Weighted
-- (GMTask*)named:(NSString*)name withRands:(OOORandoms*)rands selectWithWeight:(GMWeightedTask*)child, ... {
-    return [[GMWeightedSelector alloc] initWithName:name rands:rands children:OOO_VARARGS_TO_ARRAY(GMWeightedTask*, child)];
+- (GMTask*)named:(NSString*)name withRands:(OOORandoms*)rands selectWithWeight:(NSArray*)weightedChildren {
+    return [[GMWeightedSelector alloc] initWithName:name rands:rands children:weightedChildren];
 }
 
-- (GMTask*)withRands:(OOORandoms*)rands selectWithWeight:(GMWeightedTask*)child, ... {
-    return [[GMWeightedSelector alloc] initWithName:nil rands:rands children:OOO_VARARGS_TO_ARRAY(GMWeightedTask*, child)];
+- (GMTask*)withRands:(OOORandoms*)rands selectWithWeight:(NSArray*)weightedChildren {
+    return [[GMWeightedSelector alloc] initWithName:nil rands:rands children:weightedChildren];
 }
 
 /// Block
@@ -189,24 +189,24 @@
     return [[GMNotPredicate alloc] initWithName:name pred:pred];
 }
 
-- (GMPredicate*)named:(NSString*)name and:(GMPredicate*)pred, ... {
-    return [[GMAndPredicate alloc] initWithName:name preds:OOO_VARARGS_TO_ARRAY(GMPredicate*, pred)];
+- (GMPredicate*)named:(NSString*)name and:(NSArray*)preds {
+    return [[GMAndPredicate alloc] initWithName:name preds:preds];
 }
 
-- (GMPredicate*)named:(NSString*)name or:(GMPredicate*)pred, ... {
-    return [[GMOrPredicate alloc] initWithName:name preds:OOO_VARARGS_TO_ARRAY(GMPredicate*, pred)];
+- (GMPredicate*)named:(NSString*)name or:(NSArray*)preds {
+    return [[GMOrPredicate alloc] initWithName:name preds:preds];
 }
 
 - (GMPredicate*)not:(GMPredicate*)pred {
     return [[GMNotPredicate alloc] initWithName:nil pred:pred];
 }
 
-- (GMPredicate*)and:(GMPredicate*)pred, ... {
-    return [[GMAndPredicate alloc] initWithName:nil preds:OOO_VARARGS_TO_ARRAY(GMPredicate*, pred)];
+- (GMPredicate*)and:(NSArray*)preds {
+    return [[GMAndPredicate alloc] initWithName:nil preds:preds];
 }
 
-- (GMPredicate*)or:(GMPredicate*)pred, ... {
-    return [[GMOrPredicate alloc] initWithName:nil preds:OOO_VARARGS_TO_ARRAY(GMPredicate*, pred)];
+- (GMPredicate*)or:(NSArray*)preds {
+    return [[GMOrPredicate alloc] initWithName:nil preds:preds];
 }
 
 @end

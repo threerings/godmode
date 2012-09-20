@@ -15,12 +15,12 @@
 - (GMTask*)if:(GMPredicate*)pred do:(GMTask*)task;
 
 /// Runs tasks in sequence until one fails, or all succeed.
-- (GMTask*)named:(NSString*)name sequence:(GMTask*)child, ... NS_REQUIRES_NIL_TERMINATION;
-- (GMTask*)sequence:(GMTask*)child, ... NS_REQUIRES_NIL_TERMINATION;
+- (GMTask*)named:(NSString*)name sequence:(NSArray*)children;
+- (GMTask*)sequence:(NSArray*)children;
 
 /// Run all tasks concurrently until one fails
-- (GMTask*)named:(NSString*)name parallel:(GMTask*)child, ... NS_REQUIRES_NIL_TERMINATION;
-- (GMTask*)parallel:(GMTask*)child, ... NS_REQUIRES_NIL_TERMINATION;
+- (GMTask*)named:(NSString*)name parallel:(NSArray*)children;
+- (GMTask*)parallel:(NSArray*)children;
 
 /// Loops a task forever
 - (GMTask*)named:(NSString*)name loop:(GMTask*)task;
@@ -40,12 +40,12 @@
 
 /// Runs the first task that returns a non FAIL state. Higher-priority tasks (those higher in the list)
 /// can interrupt lower-priority tasks that are running.
-- (GMTask*)named:(NSString*)name selectWithPriority:(GMTask*)child, ... NS_REQUIRES_NIL_TERMINATION;
-- (GMTask*)selectWithPriority:(GMTask*)child, ... NS_REQUIRES_NIL_TERMINATION;
+- (GMTask*)named:(NSString*)name selectWithPriority:(NSArray*)children;
+- (GMTask*)selectWithPriority:(NSArray*)children;
 
 /// Randomly selects a task to run
-- (GMTask*)named:(NSString*)name withRands:(OOORandoms*)rands selectWithWeight:(GMWeightedTask*)child, ... NS_REQUIRES_NIL_TERMINATION;
-- (GMTask*)withRands:(OOORandoms*)rands selectWithWeight:(GMWeightedTask*)child, ... NS_REQUIRES_NIL_TERMINATION;
+- (GMTask*)named:(NSString*)name withRands:(OOORandoms*)rands selectWithWeight:(NSArray*)weightedChildren;
+- (GMTask*)withRands:(OOORandoms*)rands selectWithWeight:(NSArray*)weightedChildren;
 
 /// Waits a specified amount of time
 - (GMTask*)named:(NSString*)name wait:(float)time;
@@ -84,11 +84,11 @@
 
 /// GMPredicate operators
 - (GMPredicate*)named:(NSString*)name not:(GMPredicate*)pred;
-- (GMPredicate*)named:(NSString*)name and:(GMPredicate*)pred, ... NS_REQUIRES_NIL_TERMINATION;
-- (GMPredicate*)named:(NSString*)name or:(GMPredicate*)pred, ... NS_REQUIRES_NIL_TERMINATION;
+- (GMPredicate*)named:(NSString*)name and:(NSArray*)preds;
+- (GMPredicate*)named:(NSString*)name or:(NSArray*)preds;
 - (GMPredicate*)not:(GMPredicate*)pred;
-- (GMPredicate*)and:(GMPredicate*)pred, ... NS_REQUIRES_NIL_TERMINATION;
-- (GMPredicate*)or:(GMPredicate*)pred, ... NS_REQUIRES_NIL_TERMINATION;
+- (GMPredicate*)and:(NSArray*)preds;
+- (GMPredicate*)or:(NSArray*)preds;
 
 
 // abstract. Subclasses must override.
