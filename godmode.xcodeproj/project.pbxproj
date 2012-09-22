@@ -107,7 +107,7 @@
 		22B201C015F6C1FD00394FE8 /* GMTaskPrinter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMTaskPrinter.h; sourceTree = "<group>"; };
 		22B201C115F6C1FD00394FE8 /* GMTaskPrinter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMTaskPrinter.m; sourceTree = "<group>"; };
 		22B201C215F6C1FD00394FE8 /* GMBlackboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMBlackboard.h; sourceTree = "<group>"; };
-		22B201C315F6C1FD00394FE8 /* GMBlackboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMBlackboard.m; sourceTree = "<group>"; };
+		22B201C315F6C1FD00394FE8 /* GMBlackboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = GMBlackboard.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		22B201C415F6C1FD00394FE8 /* GMBlockTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMBlockTask.h; sourceTree = "<group>"; };
 		22B201C515F6C1FD00394FE8 /* GMBlockTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMBlockTask.m; sourceTree = "<group>"; };
 		22B201C615F6C1FD00394FE8 /* GMRemoveBlackboardKeyAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRemoveBlackboardKeyAction.h; sourceTree = "<group>"; };
