@@ -23,7 +23,7 @@
 
 - (GMStatus)update:(float)dt {
     while (_childIdx < _children.count) {
-        _curChild = [_children objectAtIndex:_childIdx];
+        _curChild = _children[_childIdx];
         GMStatus childStatus = [_curChild updateTree:dt];
         if (childStatus == GM_Success) {
             // the child completed. Move on the to the next one.
