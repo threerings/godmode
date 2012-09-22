@@ -131,7 +131,7 @@
 		22B201D815F6C1FE00394FE8 /* GMSemaphoreGuardDecorator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMSemaphoreGuardDecorator.h; sourceTree = "<group>"; };
 		22B201D915F6C1FE00394FE8 /* GMSemaphoreGuardDecorator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMSemaphoreGuardDecorator.m; sourceTree = "<group>"; };
 		22B201DA15F6C1FE00394FE8 /* GMSequenceSelector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMSequenceSelector.h; sourceTree = "<group>"; };
-		22B201DB15F6C1FE00394FE8 /* GMSequenceSelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMSequenceSelector.m; sourceTree = "<group>"; };
+		22B201DB15F6C1FE00394FE8 /* GMSequenceSelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = GMSequenceSelector.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		22B201DC15F6C1FE00394FE8 /* GMStatefulTask+Protected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GMStatefulTask+Protected.h"; sourceTree = "<group>"; };
 		22B201DD15F6C1FE00394FE8 /* GMStatefulTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMStatefulTask.h; sourceTree = "<group>"; };
 		22B201DE15F6C1FE00394FE8 /* GMStatefulTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMStatefulTask.m; sourceTree = "<group>"; };
