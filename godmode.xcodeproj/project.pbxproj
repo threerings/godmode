@@ -95,7 +95,7 @@
 		22B200DF15F6B99300394FE8 /* godmodeTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = godmodeTests.h; sourceTree = "<group>"; };
 		22B200E015F6B99300394FE8 /* godmodeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = godmodeTests.m; sourceTree = "<group>"; };
 		22B200F215F6BA3000394FE8 /* godmode_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = godmode_Prefix.pch; sourceTree = "<group>"; };
-		22B2014915F6BC5900394FE8 /* cooocoa.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cooocoa.xcodeproj; path = ../cooocoa.xcodeproj; sourceTree = COOOCOA_SRC; };
+		22B2014915F6BC5900394FE8 /* cooocoa.xcodeproj */ = {isa = PBXFileReference; name = cooocoa.xcodeproj; path = ../cooocoa.xcodeproj; sourceTree = COOOCOA_SRC; };
 		22B201B815F6C1FC00394FE8 /* GMTaskFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMTaskFactory.h; sourceTree = "<group>"; };
 		22B201B915F6C1FC00394FE8 /* GMTaskFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMTaskFactory.m; sourceTree = "<group>"; };
 		22B201BA15F6C1FC00394FE8 /* GMSemaphore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMSemaphore.h; sourceTree = "<group>"; };
