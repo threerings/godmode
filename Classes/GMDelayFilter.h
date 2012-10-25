@@ -4,6 +4,8 @@
 #import "GMStatefulTask.h"
 #import "GMTaskContainer.h"
 
+@class GMFloatRange;
+
 typedef float (^DelayFilterTimeCallback)();
 
 @interface GMDelayFilter : GMStatefulTask <GMTaskContainer> {
@@ -11,7 +13,7 @@ typedef float (^DelayFilterTimeCallback)();
     GMTask* _task;
 
     DelayFilterTimeCallback _curTime;
-    OOOFloatRange* _minDelay;
+    GMFloatRange* _minDelay;
 
     BOOL _inited;
     float _curDelay;
@@ -20,7 +22,7 @@ typedef float (^DelayFilterTimeCallback)();
 }
 
 - (id)initWithName:(NSString*)name
-          minDelay:(OOOFloatRange*)minDelay
+          minDelay:(GMFloatRange*)minDelay
       timeCallback:(DelayFilterTimeCallback)curTime
               task:(GMTask*)task;
 

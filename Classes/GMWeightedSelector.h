@@ -4,7 +4,8 @@
 #import "GMStatefulTask.h"
 #import "GMTaskContainer.h"
 
-@class OOORandoms;
+@class GMRandoms;
+@protocol GMRng;
 
 @interface GMWeightedTask : NSObject
 + (GMWeightedTask*)withTask:(GMTask*)task weight:(float)weight;
@@ -12,11 +13,11 @@
 
 @interface GMWeightedSelector : GMStatefulTask <GMTaskContainer> {
 @protected
-    OOORandoms* _rands;
+    GMRandoms* _rands;
     NSArray* _children;
     GMWeightedTask* _curChild;
 }
 
-- (id)initWithName:(NSString*)name rands:(OOORandoms*)rands children:(NSArray*)children;
+- (id)initWithName:(NSString*)name rng:(id<GMRng>)rng children:(NSArray*)children;
 
 @end

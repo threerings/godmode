@@ -6,7 +6,9 @@
 #import "GMSemaphore.h"
 #import "GMPredicate.h"
 
+@protocol GMRng;
 @class GMBlackboard;
+@class GMFloatRange;
 
 @interface GMTaskFactory : NSObject
 
@@ -35,8 +37,8 @@
 - (GMTask*)withLoopType:(GMLoopType)loopType loop:(GMTask*)task;
 
 /// Runs a task, and ensures that it won't be re-run until a minimum amount of time has elapsed
-- (GMTask*)named:(NSString*)name withRepeatDelay:(OOOFloatRange*)minDelay do:(GMTask*)task;
-- (GMTask*)withRepeatDelay:(OOOFloatRange*)minDelay do:(GMTask*)task;
+- (GMTask*)named:(NSString*)name withRepeatDelay:(GMFloatRange*)minDelay do:(GMTask*)task;
+- (GMTask*)withRepeatDelay:(GMFloatRange*)minDelay do:(GMTask*)task;
 
 /// Runs the first task that returns a non FAIL state. Higher-priority tasks (those higher in the list)
 /// can interrupt lower-priority tasks that are running.
@@ -44,8 +46,8 @@
 - (GMTask*)selectWithPriority:(NSArray*)children;
 
 /// Randomly selects a task to run
-- (GMTask*)named:(NSString*)name withRands:(OOORandoms*)rands selectWithWeight:(NSArray*)weightedChildren;
-- (GMTask*)withRands:(OOORandoms*)rands selectWithWeight:(NSArray*)weightedChildren;
+- (GMTask*)named:(NSString*)name withRng:(id<GMRng>)rng selectWithWeight:(NSArray*)weightedChildren;
+- (GMTask*)withRng:(id<GMRng>)rng selectWithWeight:(NSArray*)weightedChildren;
 
 /// Waits a specified amount of time
 - (GMTask*)named:(NSString*)name wait:(float)time;
@@ -54,10 +56,6 @@
 /// Runs a block
 - (GMTask*)named:(NSString*)name block:(GMStatus(^)(float dt))block;
 - (GMTask*)block:(GMStatus(^)(float dt))block;
-
-/// Runs a task, and sets a flag while it's running
-- (GMTask*)named:(NSString*)name withFlags:(OOOMutableFlags*)flags setFlag:(int)flag while:(GMTask*)task;
-- (GMTask*)withFlags:(OOOMutableFlags*)flags setFlag:(int)flag while:(GMTask*)task;
 
 /// Removes a key from a blackboard
 - (GMTask*)named:(NSString*)name removeKey:(NSString*)key fromBlackboard:(GMBlackboard*)blackboard;
@@ -73,10 +71,6 @@
 
 /// Does nothing
 - (GMTask*)noOp;
-
-/// Succeeds if the given flag is set
-- (GMPredicate*)named:(NSString*)name withFlags:(OOOFlags*)flags isFlagSet:(int)flag;
-- (GMPredicate*)withFlags:(OOOFlags*)flags isFlagSet:(int)flag;
 
 /// GMPredicate block
 - (GMPredicate*)named:(NSString*)name pred:(BOOL(^)())pred;

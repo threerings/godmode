@@ -2,6 +2,11 @@
 // godmode - Copyright 2012 Three Rings Design
 
 #import "GMTaskFactory.h"
+
+#import "GMDefs.h"
+#import "GMRandoms.h"
+#import "GMFloatRange.h"
+
 #import "GMNotDecorator.h"
 #import "GMParallelSelector.h"
 #import "GMPrioritySelector.h"
@@ -12,15 +17,12 @@
 #import "GMDelayFilter.h"
 #import "GMSemaphoreGuardDecorator.h"
 #import "GMPredicateFilter.h"
-#import "GMFlagDecorator.h"
 #import "GMRemoveBlackboardKeyAction.h"
-
-#import "GMFlagSetPredicate.h"
 
 @implementation GMTaskFactory
 
 - (float)curTime {
-    OOO_IS_ABSTRACT();
+    GM_IS_ABSTRACT();
     return 0;
 }
 
@@ -34,14 +36,14 @@
 }
 
 /// Delay
-- (GMTask*)named:(NSString*)name withRepeatDelay:(OOOFloatRange*)minDelay do:(GMTask*)task {
+- (GMTask*)named:(NSString*)name withRepeatDelay:(GMFloatRange*)minDelay do:(GMTask*)task {
     return [[GMDelayFilter alloc] initWithName:name
                                     minDelay:minDelay
                                 timeCallback:^float{ return [self curTime]; }
                                         task:task];
 }
 
-- (GMTask*)withRepeatDelay:(OOOFloatRange*)minDelay do:(GMTask*)task {
+- (GMTask*)withRepeatDelay:(GMFloatRange*)minDelay do:(GMTask*)task {
     return [self named:nil withRepeatDelay:minDelay do:task];
 }
 
@@ -109,12 +111,12 @@
 }
 
 /// Weighted
-- (GMTask*)named:(NSString*)name withRands:(OOORandoms*)rands selectWithWeight:(NSArray*)weightedChildren {
-    return [[GMWeightedSelector alloc] initWithName:name rands:rands children:weightedChildren];
+- (GMTask*)named:(NSString*)name withRng:(id<GMRng>)rng selectWithWeight:(NSArray*)weightedChildren {
+    return [[GMWeightedSelector alloc] initWithName:name rng:rng children:weightedChildren];
 }
 
-- (GMTask*)withRands:(OOORandoms*)rands selectWithWeight:(NSArray*)weightedChildren {
-    return [[GMWeightedSelector alloc] initWithName:nil rands:rands children:weightedChildren];
+- (GMTask*)withRng:(id<GMRng>)rng selectWithWeight:(NSArray*)weightedChildren {
+    return [[GMWeightedSelector alloc] initWithName:nil rng:rng children:weightedChildren];
 }
 
 /// Block
@@ -124,15 +126,6 @@
 
 - (GMTask*)block:(GMStatus (^)(float))block {
     return [[GMBlockTask alloc] initWithName:nil block:block];
-}
-
-/// FlagDecorator
-- (GMTask*)named:(NSString*)name withFlags:(OOOMutableFlags*)flags setFlag:(int)flag while:(GMTask*)task {
-    return [[GMFlagDecorator alloc] initWithName:name flags:flags flag:flag task:task];
-}
-
-- (GMTask*)withFlags:(OOOMutableFlags*)flags setFlag:(int)flag while:(GMTask*)task {
-    return [[GMFlagDecorator alloc] initWithName:nil flags:flags flag:flag task:task];
 }
 
 /// Remove Blackboard Key
@@ -166,14 +159,6 @@
     return [[GMNoOpAction alloc] init];
 }
 
-/// Predicate: IsFlagSet
-- (GMPredicate*)named:(NSString*)name withFlags:(OOOFlags*)flags isFlagSet:(int)flag {
-    return [[GMFlagSetPredicate alloc] initWithName:name flags:flags flag:flag];
-}
-
-- (GMPredicate*)withFlags:(OOOFlags*)flags isFlagSet:(int)flag {
-    return [[GMFlagSetPredicate alloc] initWithName:nil flags:flags flag:flag];
-}
 
 /// Predicate: block
 - (GMPredicate*)named:(NSString*)name pred:(BOOL(^)())pred {

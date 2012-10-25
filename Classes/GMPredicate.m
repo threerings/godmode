@@ -2,6 +2,8 @@
 // godmode - Copyright 2012 Three Rings Design
 
 #import "GMPredicate.h"
+
+#import "GMDefs.h"
 #import "GMTaskContainer.h"
 #import "GMTask+Protected.h"
 
@@ -67,7 +69,7 @@ typedef BOOL (^BoolBlock)();
 @implementation GMPredicate
 
 - (BOOL)evaluate {
-    OOO_IS_ABSTRACT();
+    GM_IS_ABSTRACT();
     return NO;
 }
 

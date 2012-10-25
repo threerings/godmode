@@ -2,7 +2,9 @@
 // godmode - Copyright 2012 Three Rings Design
 
 #import "GMWeightedSelector.h"
+
 #import "GMStatefulTask+Protected.h"
+#import "GMRandoms.h"
 
 @interface GMWeightedTask () {
 @public
@@ -24,9 +26,9 @@
 
 @implementation GMWeightedSelector
 
-- (id)initWithName:(NSString*)name rands:(OOORandoms*)rands children:(NSArray*)children {
+- (id)initWithName:(NSString*)name rng:(id<GMRng>)rng children:(NSArray*)children {
     if ((self = [super initWithName:name])) {
-        _rands = rands;
+        _rands = [GMRandoms withRng:rng];
         _children = children;
     }
     return self;
@@ -106,9 +108,11 @@
 }
 
 - (id<NSFastEnumeration>)children {
-    return [OOOCollections map:_children transformer:^GMTask* (GMWeightedTask* wt) {
-        return wt->task;
-    }];
+    NSMutableArray* tasks = [[NSMutableArray alloc] initWithCapacity:_children.count];
+    for (GMWeightedTask* wt in _children) {
+        [tasks addObject:wt->task];
+    }
+    return tasks;
 }
 
 @end

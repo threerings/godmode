@@ -4,10 +4,12 @@
 #import "GMDelayFilter.h"
 #import "GMStatefulTask+Protected.h"
 
+#import "GMFloatRange.h"
+
 @implementation GMDelayFilter
 
 - (id)initWithName:(NSString*)name
-          minDelay:(OOOFloatRange*)minDelay
+          minDelay:(GMFloatRange*)minDelay
       timeCallback:(DelayFilterTimeCallback)curTime
               task:(GMTask*)task {
 
